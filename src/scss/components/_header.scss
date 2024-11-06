@@ -1,1 +1,21 @@
-// ваш код
+.header {
+  @include flex-all-sb;
+  padding-top: 50px;
+
+  .header-nav {
+    &__list {
+      @include flex-all-sb;
+      gap: 40px;
+    }
+  }
+
+  .header-lang {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--dark-gray-color);
+    cursor: pointer;
+    &__icon {
+      @include flex-all-sb;
+    }
+  }
+}

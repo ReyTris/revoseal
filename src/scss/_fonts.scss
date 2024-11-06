@@ -1,1 +1,13 @@
 // @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face(
+  "IBMPlexSans-Regular",
+  "../resources/fonts/IBMPlexSans-Light.woff2",
+  400,
+  normal
+);
+@include font-face(
+  "IBMPlexSans-Bold",
+  "../resources/fonts/IBMPlexSans-Bold.woff2.woff2",
+  400,
+  normal
+);

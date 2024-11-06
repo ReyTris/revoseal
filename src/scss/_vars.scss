@@ -4,9 +4,14 @@
   // base
   --font-family: "Open Sans", sans-serif;
   --content-width: 1170px;
-  --container-offset: 15px;
+  --container-offset: 25px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --light-color: #fcfbf9;
+  --main-color: #161f26;
+  --green-color: #79e943;
+  --blue-color: #0387ea;
+  --gray-color: #dbdbdb;
+  --dark-gray-color: #90a7b9;
 }
