@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
   @include ibm-font;
   @include font(var(--main-color), 16px, 24px, 400);
 }
@@ -13,9 +14,9 @@
 }
 
 .is-main-layout {
+  overflow: hidden;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 img {
@@ -34,7 +35,7 @@ ul {
 }
 
 .is-hidden {
-  display: none !important;
+  display: none;
 }
 
 .btn-reset {
@@ -80,8 +81,8 @@ ul {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   width: 100%;
-  max-width: var(--container-width);
   min-width: 320px;
+  max-width: var(--container-width);
 }
 
 .centered {

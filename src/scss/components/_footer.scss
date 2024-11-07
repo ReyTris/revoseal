@@ -1,11 +1,13 @@
 .footer {
   padding-top: 50px;
+
   .footer-info {
     display: flex;
     gap: 70px;
 
     .fi-logo {
       max-width: 152px;
+
       &__icon {
         width: 120px;
         height: 120px;
@@ -17,9 +19,9 @@
       }
 
       &__copyright {
+        margin-top: 20px;
         font-size: 12px;
         line-height: 17px;
-        margin-top: 20px;
       }
     }
 
