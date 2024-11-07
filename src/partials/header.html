@@ -1,25 +1,47 @@
 <header class="header">
   <div class="header-logo">@include('../img/svg/main-logo.svg')</div>
   <nav class="header-nav">
-    <ul class="header-nav__list">
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#">Главная</a>
+    <ul class="header-nav-list">
+      <li class="header-nav-item header-nav-item--active">
+        <a class="header-nav-link" href="/">Главная</a>
       </li>
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#">Продукция</a>
+      <li class="header-nav-item">
+        <a class="header-nav-link" href="/products.html">Продукция</a>
       </li>
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#">О компании</a>
+      <li class="header-nav-item">
+        <a class="header-nav-link" href="#">О компании</a>
       </li>
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#">Услуги</a>
+      <li class="header-nav-item">
+        <a class="header-nav-link" href="#">Услуги</a>
       </li>
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#">Контакты</a>
+      <li class="header-nav-item">
+        <a class="header-nav-link" href="#">Контакты</a>
       </li>
     </ul>
   </nav>
-  <div class="header-lang">
-    <div class="header-lang__icon"></div>
+  <div class="header-lang" data-button="dropdown">
+    <div class="hl-flag">
+      <img src="/img/lang/ru.png" alt="RU" />
+    </div>
+    <div class="hl-dropdown">
+      <a href="" class="hl-dropdown-item">
+        <span class="hl-dropdown-item__flag">
+          <img src="/img/lang/ru.png" alt="RU" />
+        </span>
+        <span class="hl-dropdown-item__title">Русский</span>
+      </a>
+      <a href="" class="hl-dropdown-item">
+        <span class="hl-dropdown-item__flag">
+          <img src="/img/lang/ru.png" alt="RU"
+        /></span>
+        <span class="hl-dropdown-item__title">Английский</span>
+      </a>
+      <a href="" class="hl-dropdown-item">
+        <span class="hl-dropdown-item__flag">
+          <img src="/img/lang/ru.png" alt="RU"
+        /></span>
+        <span class="hl-dropdown-item__title">Китайский</span>
+      </a>
+    </div>
   </div>
 </header>

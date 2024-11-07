@@ -9,15 +9,3 @@
 @import "./components/footer";
 
 // тестовые стили, удалите их
-.page-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
-
-.is-main-layout {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-}
