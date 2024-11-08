@@ -14,16 +14,16 @@
   background-color: transparent;
   cursor: pointer;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: var(--burger-line-height);
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  }
+  // &::before,
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   width: 100%;
+  //   height: var(--burger-line-height);
+  //   background-color: currentColor;
+  //   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  // }
 
   &::before {
     top: 0;
