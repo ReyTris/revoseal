@@ -11,11 +11,10 @@
     }
 
     &-link {
-      letter-spacing: 0.2px;
+      @include header-nav-link;
     }
 
     &-item {
-      @include header-nav-item;
     }
   }
 
@@ -125,11 +124,10 @@
       }
 
       &-item {
-        @include header-nav-item;
       }
 
       &-link {
-        letter-spacing: 0.2px;
+        @include header-nav-link;
       }
     }
 

@@ -2,9 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-
   @include ibm-font;
-  @include font(var(--main-color), 16px, 24px, 400);
+  color: var(--main-color);
 }
 
 .page-body {
@@ -16,6 +15,22 @@
   overflow: hidden;
   width: 100%;
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+}
+
+p {
+  @include font(var(--main-color), 16px, 24px, 400);
 }
 
 img {
@@ -37,7 +52,6 @@ button {
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .is-hidden {
@@ -107,4 +121,8 @@ ul {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.weight-600 {
+  font-weight: 600;
 }

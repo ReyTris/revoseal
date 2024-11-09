@@ -1,11 +1,12 @@
 <header>
-
   <div class="header">
     <div class="header-logo">@include('../img/svg/main-logo.svg')</div>
     <nav class="header-nav">
       <ul class="header-nav-list">
-        <li class="header-nav-item header-nav-item--active">
-          <a class="header-nav-link" href="/">Главная</a>
+        <li class="header-nav-item">
+          <a class="header-nav-link header-nav-link--active" href="/"
+            >Главная</a
+          >
         </li>
         <li class="header-nav-item">
           <a class="header-nav-link" href="/products.html">Продукция</a>
@@ -49,32 +50,63 @@
       </div>
     </div>
 
-    <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 1.83333C0 1.09695 0.596954 0.5 1.33333 0.5H22.6667C23.403 0.5 24 1.09695 24 1.83333C24 2.56971 23.403 3.16667 22.6667 3.16667H1.33333C0.596954 3.16667 0 2.56971 0 1.83333Z" fill="#161F26"/>
-        <path d="M0 8.5C0 7.76362 0.596954 7.16667 1.33333 7.16667H22.6667C23.403 7.16667 24 7.76362 24 8.5C24 9.23638 23.403 9.83333 22.6667 9.83333H1.33333C0.596954 9.83333 0 9.23638 0 8.5Z" fill="#161F26"/>
-        <path d="M0 15.1667C0 14.4303 0.596954 13.8333 1.33333 13.8333H11.5556C12.2919 13.8333 12.8889 14.4303 12.8889 15.1667C12.8889 15.903 12.2919 16.5 11.5556 16.5H1.33333C0.596954 16.5 0 15.903 0 15.1667Z" fill="#161F26"/>
+    <button
+      class="btn-reset burger"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      data-burger
+    >
+      <svg
+        width="24"
+        height="17"
+        viewBox="0 0 24 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 1.83333C0 1.09695 0.596954 0.5 1.33333 0.5H22.6667C23.403 0.5 24 1.09695 24 1.83333C24 2.56971 23.403 3.16667 22.6667 3.16667H1.33333C0.596954 3.16667 0 2.56971 0 1.83333Z"
+          fill="#161F26"
+        />
+        <path
+          d="M0 8.5C0 7.76362 0.596954 7.16667 1.33333 7.16667H22.6667C23.403 7.16667 24 7.76362 24 8.5C24 9.23638 23.403 9.83333 22.6667 9.83333H1.33333C0.596954 9.83333 0 9.23638 0 8.5Z"
+          fill="#161F26"
+        />
+        <path
+          d="M0 15.1667C0 14.4303 0.596954 13.8333 1.33333 13.8333H11.5556C12.2919 13.8333 12.8889 14.4303 12.8889 15.1667C12.8889 15.903 12.2919 16.5 11.5556 16.5H1.33333C0.596954 16.5 0 15.903 0 15.1667Z"
+          fill="#161F26"
+        />
       </svg>
     </button>
   </div>
 
   <div class="header-mob" data-menu>
-      <button class="burger-close" data-burger-close>
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_915_2392)">
-          <path d="M21.3498 6.66166C20.8948 6.20666 20.1598 6.20666 19.7048 6.66166L13.9998 12.355L8.29484 6.65C7.83984 6.195 7.10484 6.195 6.64984 6.65C6.19484 7.105 6.19484 7.84 6.64984 8.295L12.3548 14L6.64984 19.705C6.19484 20.16 6.19484 20.895 6.64984 21.35C7.10484 21.805 7.83984 21.805 8.29484 21.35L13.9998 15.645L19.7048 21.35C20.1598 21.805 20.8948 21.805 21.3498 21.35C21.8048 20.895 21.8048 20.16 21.3498 19.705L15.6448 14L21.3498 8.295C21.7932 7.85166 21.7932 7.105 21.3498 6.66166Z" fill="#161F26"/>
-          </g>
-          <defs>
+    <button class="burger-close" data-burger-close>
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 28 28"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_915_2392)">
+          <path
+            d="M21.3498 6.66166C20.8948 6.20666 20.1598 6.20666 19.7048 6.66166L13.9998 12.355L8.29484 6.65C7.83984 6.195 7.10484 6.195 6.64984 6.65C6.19484 7.105 6.19484 7.84 6.64984 8.295L12.3548 14L6.64984 19.705C6.19484 20.16 6.19484 20.895 6.64984 21.35C7.10484 21.805 7.83984 21.805 8.29484 21.35L13.9998 15.645L19.7048 21.35C20.1598 21.805 20.8948 21.805 21.3498 21.35C21.8048 20.895 21.8048 20.16 21.3498 19.705L15.6448 14L21.3498 8.295C21.7932 7.85166 21.7932 7.105 21.3498 6.66166Z"
+            fill="#161F26"
+          />
+        </g>
+        <defs>
           <clipPath id="clip0_915_2392">
-          <rect width="28" height="28" fill="white"/>
+            <rect width="28" height="28" fill="white" />
           </clipPath>
-          </defs>
-        </svg>
-      </button>
+        </defs>
+      </svg>
+    </button>
     <nav class="header-nav">
       <ul class="header-nav-list">
-        <li class="header-nav-item header-nav-item--active">
-          <a class="header-nav-link" href="/">Главная</a>
+        <li class="header-nav-item">
+          <a class="header-nav-link header-nav-link--active" href="/"
+            >Главная</a
+          >
         </li>
         <li class="header-nav-item">
           <a class="header-nav-link" href="/products.html">Продукция</a>
@@ -105,7 +137,7 @@
         </a>
         <a href="" class="hl-dropdown-item">
           <span class="hl-dropdown-item__flag">
-            <img src="img/ru.png" alt="RU"/>
+            <img src="img/ru.png" alt="RU" />
           </span>
           <span class="hl-dropdown-item__title">Английский</span>
         </a>

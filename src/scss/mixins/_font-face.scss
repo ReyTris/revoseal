@@ -23,6 +23,19 @@
   }
 }
 
+@mixin f($size, $lh, $weight: 0, $style: 0) {
+  font-size: $size;
+  line-height: $lh;
+
+  @if $weight != 0 {
+    font-weight: $weight;
+  }
+
+  @if $style != 0 {
+    font-style: $style;
+  }
+}
+
 @mixin ibm-font {
   font-family: "IBM", "Open Sans", sans-serif;
 }
