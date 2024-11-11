@@ -4,13 +4,75 @@
 
   <body class="page-body">
     <div class="is-main-layout">
-      <div class="container">
-        @include('partials/header.html')
-        <main class="main">
-          <section class="main-intro"></section>
-        </main>
-        @include('partials/footer.html')
-      </div>
+      <!-- <div class="container"> -->
+      @include('partials/header.html')
+      <main class="main">
+        <section class="section-first main-intro">
+          <div class="container">
+            <div class="mi-header">
+              <h1>
+                revoseal.
+                <span class="h1-small">технологии надежности</span>
+              </h1>
+              <div class="mi-header-preview">
+                Инновационные возможности, качество и технологии сочетаются с
+                международным сервисом, профессиональным ключевым учетом и
+                технической экспертизой для отраслевых требований
+              </div>
+            </div>
+            <div class="mi-banner">
+              <div class="mi-image">
+                <img
+                  class="main-round"
+                  src="img/main-intro.png"
+                  alt="технологии надежности"
+                />
+              </div>
+              <div class="mi-banner-btn">
+                <button class="main-round">
+                  @include('img/svg/arrowUp.svg')
+                  <span>Оставить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-main">
+          <div class="container container--about">
+            <div class="about">
+              <div class="about-image">
+                <img
+                  width="770"
+                  height="570"
+                  src="img/about.png"
+                  alt="Мы Revoseal"
+                />
+              </div>
+              <div class="about-preview main-round">
+                <div class="ap-title">Мы <br />Revoseal</div>
+                <div class="ap-text">
+                  От производительности системы зависит ее конкурентоспособность
+                  – особенно в международных перерабатывающих отраслях. В
+                  химической, нефтехимической, газодобывающей и смежных отраслях
+                  малые и почти невидимые элементы объекта или колонны играют
+                  решающую роль; речь идет о прокладках. Их технология, качество
+                  и надежность определяют производительность или время простоя
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-main products">
+          <div class="container">
+            <h2>Продукция</h2>
+            @include('partials/products.html')
+          </div>
+        </section>
+      </main>
+      @include('partials/footer.html')
     </div>
+    <!-- </div> -->
   </body>
 </html>

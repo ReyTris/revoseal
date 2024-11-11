@@ -23,3 +23,18 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin is-grid($columns, $gap, $rowgap, $fr: 1fr) {
+  .is-grid {
+    display: grid;
+    grid-template-columns: repeat($columns, #{$fr});
+    column-gap: #{$gap}px;
+    row-gap: #{$rowgap}px;
+  }
+}

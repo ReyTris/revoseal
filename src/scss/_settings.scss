@@ -65,6 +65,10 @@ ul {
   cursor: pointer;
 }
 
+.main-round {
+  border-radius: 24px;
+}
+
 .list-reset {
   list-style: none;
   margin: 0;
@@ -105,6 +109,20 @@ ul {
   max-width: var(--container-width);
 }
 
+section {
+  &.section-first {
+    margin-top: 40px;
+  }
+
+  &.section-main {
+    margin-top: 120px;
+  }
+}
+
+.content-block {
+  margin-top: 50px;
+}
+
 .centered {
   text-align: center;
 }
@@ -125,4 +143,49 @@ ul {
 
 .weight-600 {
   font-weight: 600;
+}
+
+@include big-desktop {
+  section {
+    &.section-main {
+      margin-top: 100px;
+    }
+  }
+}
+
+@include tablet {
+  section {
+    &.section-first {
+      margin-top: 30px;
+    }
+
+    &.section-main {
+      margin-top: 80px;
+    }
+  }
+
+  .content-block {
+    margin-top: 37px;
+  }
+}
+
+@include mobile-bg {
+  section {
+    &.section-main {
+      margin-top: 60px;
+    }
+  }
+  .content-block {
+    margin-top: 30px;
+  }
+  .container--about {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@include small-mobile {
+  .content-block {
+    margin-top: 25px;
+  }
 }

@@ -8,4 +8,583 @@
 @import "./components/header";
 @import "./components/footer";
 
+h1 {
+  @include f(74px, 96px, 600);
+  color: var(--blue-color);
 
+  .h1-small {
+    display: block;
+    @include f(54px, 70px, 400);
+  }
+}
+
+h2 {
+  @include f(46px, 60px, 600);
+}
+
+.main-intro {
+  @include flex-column-center;
+
+  .mi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .mi-header-preview {
+    @include f(16px, 24px, 400);
+    max-width: 370px;
+  }
+
+  .mi-banner {
+    position: relative;
+    margin-top: 40px;
+
+    .mi-banner-btn {
+      position: absolute;
+      background: transparent;
+      bottom: 3px;
+      right: 0px;
+      background-color: white;
+      border-radius: 16px 0 0 0;
+      border-top: 1px solid var(--gray-color);
+      border-left: 1px solid var(--gray-color);
+      padding: 15px 0 0 15px;
+      z-index: 10;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -16px;
+        border-radius: 0 0 16px 0;
+        width: 16px;
+        height: 16px;
+        box-shadow: 4px 4px 0 3px white;
+      }
+
+      &::after {
+        content: "";
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: -16px;
+        right: 0;
+        border-radius: 0 0 16px 0;
+        box-shadow: 4px 4px 0 3px white;
+      }
+
+      &:hover {
+        span {
+          font-size: 26px;
+        }
+
+        svg {
+          transform: scale(1.2);
+        }
+      }
+
+      button {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        background-color: var(--blue-color);
+        width: 270px;
+        height: 254px;
+        padding: 20px;
+        span {
+          @include f(24px, 34px, 500);
+
+          display: block;
+          color: white;
+          transition: all 0.3s ease;
+        }
+
+        svg {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+.products {
+  @include is-grid(3, 30, 30);
+  .is-grid {
+    .products-item {
+      position: relative;
+      border: 1px solid var(--gray-color);
+      border-radius: 16px;
+      height: 266px;
+      text-align: right;
+      background: var(--light-color);
+      padding: 30px;
+
+      &:hover {
+        .products-item__corner {
+          opacity: 1;
+        }
+      }
+
+      &__title {
+        @include f(16px, 24px, 500);
+      }
+
+      &__image {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        width: 150px;
+        height: 150px;
+      }
+
+      &__corner {
+        position: absolute;
+        background: transparent;
+        bottom: -1px;
+        right: -1px;
+        z-index: 10;
+        background: white;
+        border-radius: 16px 0 0 0;
+        border-top: 1px solid var(--gray-color);
+        border-left: 1px solid var(--gray-color);
+        padding: 10px;
+        width: 200px;
+        height: 65px;
+        z-index: 10;
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: -16px;
+          border-radius: 0 0 16px 0;
+          border-right: 1px solid var(--gray-color);
+          border-bottom: 1px solid var(--gray-color);
+          width: 16px;
+          height: 16px;
+          box-shadow: 4px 4px 0 3px white;
+        }
+
+        &::after {
+          content: "";
+          border-right: 1px solid var(--gray-color);
+          border-bottom: 1px solid var(--gray-color);
+          height: 16px;
+          width: 16px;
+          position: absolute;
+          top: -16px;
+          right: 0;
+          border-radius: 0 0 16px 0;
+          box-shadow: 4px 4px 0 3px white;
+        }
+
+        a {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          background-color: var(--blue-color);
+          padding: 18px 23px 18px 32px;
+          border-radius: 16px;
+          color: var(--light-color);
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: var(--dark-blue-color);
+          }
+
+          svg {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .products-link {
+      position: relative;
+      background-color: var(--blue-color);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      &:hover {
+        span {
+          font-size: 26px;
+        }
+
+        svg {
+          transform: scale(1.2);
+        }
+      }
+
+      &__text {
+        @include f(24px, 34px, 500);
+        color: var(--light-color);
+        display: block;
+        transition: all 0.3s ease;
+      }
+
+      svg {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+.about {
+  position: relative;
+  .about-image {
+    max-width: 770px;
+  }
+
+  .about-preview {
+    position: absolute;
+    right: 0;
+    bottom: 37px;
+    padding: 32px;
+    max-width: 570px;
+    background: var(--light-color);
+    border: 1px solid var(--gray-color);
+
+    .ap-title {
+      @include f(46px, 60px, 600);
+    }
+
+    .ap-text {
+      @include f(16px, 24px, 400);
+      margin-top: 30px;
+      padding-left: 30px;
+      border-left: 1px solid var(--blue-color);
+    }
+  }
+}
+
+@include big-desktop {
+  h1 {
+    .h1-small {
+      @include f(36px, 46px, 400);
+    }
+  }
+
+  .main-intro {
+    .mi-banner {
+      .mi-banner-btn {
+        &:hover {
+          span {
+            font-size: 24px;
+          }
+        }
+
+        button {
+          width: 228px;
+          height: 214px;
+          padding: 15px;
+
+          svg {
+            top: 15px;
+            right: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .products {
+    @include is-grid(3, 20, 20);
+    .is-grid {
+      .products-item {
+        height: 224px;
+        &__corner {
+          width: 180px;
+
+          a {
+            padding: 18px 16px 18px 24px;
+          }
+        }
+
+        &__image {
+          width: 110px;
+          height: 110px;
+        }
+      }
+    }
+  }
+
+  .about {
+    .about-image {
+      max-width: 726px;
+    }
+
+    .about-preview {
+      max-width: 488px;
+      padding: 20px 15px 20px 30px;
+
+      .ap-title {
+        @include f(36px, 46px, 600);
+      }
+
+      .ap-text {
+        margin-top: 10px;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  h1 {
+    @include f(54px, 70px, 600);
+
+    .h1-small {
+      @include f(28px, 36px, 400);
+    }
+  }
+
+  h2 {
+    @include f(36px, 46px, 600);
+  }
+
+  .main-intro {
+    .mi-header-preview {
+      max-width: 340px;
+    }
+
+    .mi-banner {
+      .mi-banner-btn {
+        &:hover {
+          span {
+            font-size: 20px;
+          }
+        }
+        button {
+          width: 194px;
+          height: 148px;
+
+          span {
+            @include f(18px, 26px, 500);
+          }
+
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+  .products {
+    @include is-grid(3, 20, 20);
+    .is-grid {
+      .products-item {
+        height: 206px;
+        padding: 20px;
+
+        &__image {
+          width: 96px;
+          height: 96px;
+
+          left: 20px;
+          bottom: 20px;
+        }
+      }
+
+      .products-link {
+        &:hover {
+          span {
+            font-size: 24px;
+          }
+        }
+        svg {
+          top: 20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+
+  .about {
+    .about-image {
+      max-width: 516px;
+    }
+
+    .about-preview {
+      max-width: 452px;
+      padding: 20px;
+      bottom: 40px;
+
+      .ap-title {
+        @include f(28px, 36px, 600);
+      }
+
+      .ap-text {
+        @include f(15px, 22px, 400);
+      }
+    }
+  }
+}
+
+@include mobile-bg {
+  .main-intro {
+    .mi-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .mi-header-preview {
+      margin-top: 20px;
+    }
+
+    .mi-banner {
+      .mi-image {
+        img {
+          height: 300px;
+        }
+      }
+      .mi-banner-btn {
+        &:hover {
+          span {
+            font-size: 17px;
+          }
+        }
+        button {
+          width: 150px;
+          height: 100px;
+
+          span {
+            @include f(15px, 22px, 500);
+          }
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .products {
+    @include is-grid(2, 20, 20);
+    .is-grid {
+      .products-item {
+        height: 180px;
+        padding: 15px;
+
+        &__image {
+          left: 15px;
+          bottom: 15px;
+        }
+
+        &__corner {
+          width: 180px;
+          a {
+            padding: 18px 16px 18px 24px;
+          }
+        }
+      }
+
+      .products-link {
+        grid-column: 1/3;
+        svg {
+          top: 15px;
+          right: 15px;
+        }
+      }
+    }
+  }
+
+  .about {
+    @include flex-all-center;
+    flex-direction: column;
+    padding: 0 20px;
+
+    .about-image {
+      width: 120%;
+      img {
+        border: none;
+      }
+    }
+
+    .about-preview {
+      position: relative;
+      max-width: 400px;
+      padding: 20px;
+      bottom: 100px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@include small-mobile {
+  h1 {
+    @include f(46px, 60px, 600);
+
+    .h1-small {
+      @include f(20px, 26px, 400);
+    }
+  }
+
+  h2 {
+    @include f(24px, 32px, 600);
+  }
+
+  .main-intro {
+    .mi-banner {
+      .mi-image {
+        img {
+          height: 219px;
+        }
+      }
+    }
+  }
+
+  .products {
+    @include is-grid(2, 20, 20);
+    .is-grid {
+      .products-item {
+        height: 123px;
+        padding: 10px;
+
+        &__image {
+          width: 54px;
+          height: 54px;
+          left: 10px;
+          bottom: 10px;
+        }
+        &__title {
+          @include f(12px, 18px, 500);
+        }
+      }
+    }
+  }
+
+  .about {
+    .about-preview {
+      max-width: 100%;
+      padding: 15px;
+      bottom: 70px;
+
+      .ap-title {
+        @include f(24px, 32px, 600);
+      }
+
+      .ap-text {
+        @include f(12px, 18px, 400);
+      }
+    }
+  }
+}

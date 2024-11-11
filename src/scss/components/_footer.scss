@@ -1,10 +1,13 @@
 .footer {
+  margin-top: 100px;
   padding-top: 50px;
   padding-bottom: 20px;
 
   display: grid;
   grid-template-columns: 1fr 6fr;
   column-gap: 70px;
+
+  border-top: 1px solid var(--dark-gray-color);
 
   .footer-logo {
     max-width: 152px;
@@ -93,7 +96,9 @@
 
 @include tablet {
   .footer {
+    margin-top: 80px;
     column-gap: 50px;
+
     .footer-contacts {
       grid-column: 1/6;
       .fc-list {
@@ -106,6 +111,7 @@
 
 @include mobile-bg {
   .footer {
+    margin-top: 60px;
     grid-template-columns: 1fr;
     gap: 40px;
 
