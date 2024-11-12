@@ -1,7 +1,7 @@
 @mixin header-nav-link {
-  width: fit-content;
   border-bottom: 1px solid transparent;
   padding-bottom: 10px;
+  width: fit-content;
   transition: all 0.3s ease;
   cursor: pointer;
 
@@ -12,7 +12,6 @@
   &--active {
     border-bottom: 1px solid var(--blue-color);
     font-weight: 500;
-
     pointer-events: none;
   }
 }

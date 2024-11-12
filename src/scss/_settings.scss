@@ -2,7 +2,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
   @include ibm-font;
+
   color: var(--main-color);
 }
 
@@ -44,9 +46,9 @@ a {
 }
 
 button {
-  cursor: pointer;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 ul {
@@ -54,9 +56,10 @@ ul {
   padding: 0;
 }
 
-input {
-  border: none;
+input,
+textarea {
   outline: none;
+  border: none;
 }
 
 .is-hidden {
@@ -180,9 +183,11 @@ section {
       margin-top: 60px;
     }
   }
+
   .content-block {
     margin-top: 30px;
   }
+
   .container--about {
     padding: 0;
     width: 100%;

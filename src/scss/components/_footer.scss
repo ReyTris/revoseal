@@ -1,13 +1,11 @@
 .footer {
+  display: grid;
+  column-gap: 70px;
+  grid-template-columns: 1fr 6fr;
   margin-top: 100px;
+  border-top: 1px solid var(--dark-gray-color);
   padding-top: 50px;
   padding-bottom: 20px;
-
-  display: grid;
-  grid-template-columns: 1fr 6fr;
-  column-gap: 70px;
-
-  border-top: 1px solid var(--dark-gray-color);
 
   .footer-logo {
     max-width: 152px;
@@ -28,6 +26,7 @@
       line-height: 17px;
     }
   }
+
   // .footer-info {
   .footer-catalog {
     display: flex;
@@ -47,8 +46,8 @@
     .fc-list {
       @include flex-all-center;
 
-      margin-top: 20px;
       flex-direction: column;
+      margin-top: 20px;
       gap: 10px;
 
       &-item {
@@ -58,12 +57,14 @@
       }
     }
   }
+
   // }
 
   .footer-contacts {
-    max-width: 770px;
     grid-column: 2/3;
     margin-top: 40px;
+    max-width: 770px;
+
     .fc-list {
       display: flex;
       gap: 50px;
@@ -83,8 +84,8 @@
       &-feature {
         display: flex;
         align-items: flex-start;
-        gap: 10px;
         margin-top: 20px;
+        gap: 10px;
 
         &__text {
           @include f(12px, 17px, 400);
@@ -96,11 +97,12 @@
 
 @include tablet {
   .footer {
-    margin-top: 80px;
     column-gap: 50px;
+    margin-top: 80px;
 
     .footer-contacts {
       grid-column: 1/6;
+
       .fc-list {
         display: flex;
         gap: 20px;
@@ -111,35 +113,36 @@
 
 @include mobile-bg {
   .footer {
-    margin-top: 60px;
     grid-template-columns: 1fr;
+    margin-top: 60px;
     gap: 40px;
 
     .footer-logo {
-      grid-column: 1/2;
       display: flex;
       flex-direction: column;
       align-items: center;
+      grid-column: 1/2;
       margin: 0 auto;
+
       &__icon {
         width: 88px;
         height: 88px;
       }
 
       &__copyright {
-        text-align: center;
         margin-top: 20px;
+        text-align: center;
       }
     }
 
     .footer-catalog {
-      grid-column: 1/2;
       flex-wrap: wrap;
+      grid-column: 1/2;
     }
 
     .footer-contacts {
-      margin: 0;
       grid-column: 1/2;
+      margin: 0;
 
       .fc-list {
         display: grid;
@@ -152,6 +155,7 @@
 @include small-mobile {
   .footer {
     padding-top: 30px;
+
     .footer-catalog {
       .fc-item {
         &-title {
@@ -171,12 +175,14 @@
     .footer-contacts {
       .fc-item {
         min-width: auto;
+
         &-title {
           @include f(16px, 20px, 600);
         }
 
         &-feature {
           margin-top: 14px;
+
           &__text {
             @include f(10px, 14px, 400);
           }
