@@ -1,16 +1,17 @@
 .is-box-form {
   display: flex;
-  gap: 92px;
-  background-color: var(--light-color);
-  padding: 50px;
   border: 1px solid var(--blue-color);
   border-radius: 16px;
+  padding: 50px;
+  background-color: var(--light-color);
+  gap: 92px;
 
   .bf-left {
     max-width: 300px;
 
     &__preview {
       @include f(16px, 24px, 400);
+
       margin-top: 15px;
     }
   }
@@ -25,13 +26,14 @@
     .is-form-field {
       .ff-input {
         border: 1px solid var(--main-color);
-        background-color: var(--light-color);
         border-radius: 16px;
         padding: 18px 20px;
         width: 100%;
+        background-color: var(--light-color);
 
         &::placeholder {
           color: var(--gray-color);
+
           @include f(14px, 24px, 400);
         }
       }
@@ -41,16 +43,17 @@
       grid-column: 1/3;
 
       textarea {
-        width: 100%;
-        background-color: var(--light-color);
-        padding: 18px 20px;
         border: 1px solid var(--main-color);
         border-radius: 16px;
-        resize: none;
+        padding: 18px 20px;
+        width: 100%;
         min-height: 178px;
+        background-color: var(--light-color);
+        resize: none;
 
         &::placeholder {
           color: var(--gray-color);
+
           @include f(14px, 24px, 400);
         }
       }
@@ -59,8 +62,8 @@
     .bf-agreement {
       display: flex;
       align-items: flex-start;
-      gap: 89px;
       grid-column: 1/3;
+      gap: 89px;
 
       .is-form-field--agreement {
         display: flex;
@@ -72,39 +75,39 @@
           width: 1px;
           height: 1px;
 
-          &:checked + .checkbox-icon::before {
+          &:checked + .checkbox-icon svg {
             opacity: 1;
           }
         }
 
         .checkbox-icon {
           position: relative;
-          width: 18px;
-          height: 18px;
           border: 1px solid var(--main-color);
           border-radius: 6px;
+          width: 18px;
+          height: 18px;
           cursor: pointer;
 
-          &::before {
+          svg {
             position: absolute;
-            content: "";
-            top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            background-image: url("../../img/svg/agreement.svg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            top: 50%;
             z-index: 10;
             width: 10px;
             height: 7px;
+            background-image: url("/img/svg/agreement.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             opacity: 0;
+            transform: translate(-50%, -50%);
           }
         }
 
         .checkbox-text {
           flex: 1;
           margin-left: 10px;
+
           @include f(12px, 18px, 400);
         }
       }
@@ -112,15 +115,17 @@
 
     &__button {
       @include flex-all-center;
+
       border-radius: 16px;
-      background-color: var(--blue-color);
       padding: 18px 32px;
       width: 100%;
-      @include f(16px, 24px, 500);
-      color: var(--light-color);
-      cursor: pointer;
       white-space: nowrap;
+      color: var(--light-color);
+      background-color: var(--blue-color);
       transition: all 0.3s ease;
+      cursor: pointer;
+
+      @include f(16px, 24px, 500);
 
       svg {
         margin-left: 10px;
@@ -135,8 +140,8 @@
 
 @include big-desktop {
   .is-box-form {
-    gap: 63px;
     padding: 60px 30px 90px 40px;
+    gap: 63px;
 
     .bf-form {
       .bf-agreement {
@@ -148,9 +153,9 @@
 
 @include tablet {
   .is-box-form {
-    gap: 30px;
-    padding: 30px 102px 30px 30px;
     flex-direction: column;
+    padding: 30px 102px 30px 30px;
+    gap: 30px;
 
     .bf-left {
       max-width: 100%;
@@ -189,6 +194,7 @@
     .bf-left {
       &__preview {
         @include f(12px, 16px, 400);
+
         margin-top: 12px;
       }
     }

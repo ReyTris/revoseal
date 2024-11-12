@@ -110,10 +110,10 @@
       left: 0;
       top: 0;
       z-index: 100;
+      overflow-x: auto;
       padding: 91px 40px 0;
       width: 100%;
       background-color: #fff;
-      overflow-x: auto;
     }
 
     .header-nav {
@@ -161,9 +161,9 @@
       margin-top: 40px;
 
       .hl-dropdown {
-        top: -124px;
         left: 0;
         right: auto;
+        top: -124px;
       }
     }
   }
