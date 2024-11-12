@@ -33,6 +33,10 @@ li {
 
 p {
   @include font(var(--main-color), 16px, 24px, 400);
+
+  & + p {
+    margin-top: 10px;
+  }
 }
 
 img {
@@ -178,6 +182,9 @@ section {
 }
 
 @include mobile-bg {
+  p {
+    @include f(15px, 22px, 400);
+  }
   section {
     &.section-main {
       margin-top: 60px;

@@ -17,8 +17,6 @@
 
   &-lang {
     position: relative;
-    width: 50px;
-    height: 50px;
     cursor: pointer;
 
     .hl-wrapper {
@@ -26,8 +24,8 @@
 
       border: 1px solid var(--dark-gray-color);
       border-radius: 8px;
-      width: 100%;
-      height: 100%;
+      width: 50px;
+      height: 50px;
       transition: all 0.3s ease;
 
       &:hover {
@@ -41,7 +39,7 @@
 
     .hl-dropdown {
       position: absolute;
-      left: 0;
+      right: 0;
       top: 100%;
       z-index: 20;
       display: none;
@@ -50,6 +48,7 @@
       border-radius: 8px;
       padding: 10px 0;
       width: 170px;
+      background-color: #fff;
 
       .hl-dropdown-item {
         @include flex-v-center;
@@ -110,10 +109,11 @@
       position: absolute;
       left: 0;
       top: 0;
-      z-index: 10;
+      z-index: 100;
       padding: 91px 40px 0;
       width: 100%;
       background-color: #fff;
+      overflow-x: auto;
     }
 
     .header-nav {
@@ -141,7 +141,7 @@
     &.menu--active {
       flex-direction: column;
       justify-content: flex-start;
-      padding: 70px 40px 0;
+      padding: 70px 40px;
       height: 100vh;
     }
 
@@ -159,6 +159,12 @@
 
     .header-lang {
       margin-top: 40px;
+
+      .hl-dropdown {
+        top: -124px;
+        left: 0;
+        right: auto;
+      }
     }
   }
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page-body">
+    <div class="is-main-layout">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="section-first contacts-intro">
+          <div class="container ci-wrapper">
+            <div class="ci-image">
+              <img src="img/contacts-main.png" alt="" />
+            </div>
+            <div class="ci-info">
+              <h1 class="state-a ci-info-title">Контакты</h1>
+              <p class="paragraph">
+                Вы можете использовать нашу контактную форму или связаться с
+                нами по
+              </p>
+              <p class="paragraph">Мы с нетерпением ждем вестей от вас!</p>
+              <p class="paragraph">
+                Мы предлагаем сервис по всему миру. У нас есть опытные партнеры,
+                которые будут поддерживать вас на местном уровне в вашей стране,
+                на вашем местном языке. Свяжитесь с нами, и мы с удовольствием
+                свяжемся с Вами напрямую.
+              </p>
+
+              <div class="ci-contacts">
+                <div class="ci-contacts-title">ООО Ревосил</div>
+                <div class="ci-contacts-item">
+                  <div class="ci-contacts-item__icon">
+                    @include('./img/svg/Location.svg')
+                  </div>
+                  <span class="ci-contacts-item__text"
+                    >Республика Татарстан, <br />
+                    г. Казань, Пр-кт Хусаина Ямашева 36к1, Офис 5</span
+                  >
+                </div>
+                <div class="ci-contacts-item">
+                  <div class="ci-contacts-item__icon">
+                    @include('./img/svg/Call.svg')
+                  </div>
+                  <a
+                    href="tel:+7 (977) 358-33-65"
+                    class="ci-contacts-item__text"
+                    >+7 (977) 358-33-65</a
+                  >
+                </div>
+                <div class="ci-contacts-item">
+                  <div class="ci-contacts-item__icon">
+                    @include('./img/svg/Message.svg')
+                  </div>
+                  <a
+                    href=" mailto:info@revoseal.ru"
+                    class="ci-contacts-item__text"
+                    >info@revoseal.ru</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-main">
+          <div class="container">@include('partials/form.html')</div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

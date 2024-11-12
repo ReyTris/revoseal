@@ -7,6 +7,7 @@
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/footer";
+@import "./components/contacts";
 @import "./components/form";
 
 h1 {
@@ -18,6 +19,10 @@ h1 {
     display: block;
 
     @include f(54px, 70px, 400);
+  }
+
+  &.state-a {
+    @include font(var(--main-color), 46px, 60px, 600);
   }
 }
 
@@ -48,7 +53,7 @@ h2 {
     .mi-banner-btn {
       position: absolute;
       right: 0;
-      bottom: 3px;
+      bottom: 2px;
       z-index: 10;
       border-top: 1px solid var(--gray-color);
       border-left: 1px solid var(--gray-color);
@@ -358,6 +363,10 @@ h2 {
     .h1-small {
       @include f(28px, 36px, 400);
     }
+
+    &.state-a {
+      @include f(36px, 46px, 600);
+    }
   }
 
   h2 {
@@ -458,12 +467,6 @@ h2 {
     }
 
     .mi-banner {
-      .mi-image {
-        img {
-          height: 300px;
-        }
-      }
-
       .mi-banner-btn {
         &:hover {
           span {

@@ -36,6 +36,7 @@ const App = {
 
     burgerClose?.addEventListener("click", () => {
       disableBurger();
+      enableScroll();
     });
 
     menuItems?.forEach((el) => {
@@ -55,7 +56,7 @@ const App = {
       burger?.setAttribute("aria-label", "Открыть меню");
       burger.classList.remove("burger--active");
       menu.classList.remove("menu--active");
-      enableScroll();
+      // enableScroll();
     };
   },
 
