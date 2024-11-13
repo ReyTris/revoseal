@@ -1,0 +1,126 @@
+.company-intro {
+  .ci-image {
+    margin-top: 50px;
+  }
+
+  .ci-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+
+  .ci-heading {
+    &__subtitle {
+      @include f(24px, 32px, 400);
+    }
+
+    &__title {
+      margin-top: 10px;
+    }
+  }
+
+  .ci-description {
+    max-width: 570px;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: 18px 32px;
+      border: 1px solid var(--main-color);
+      border-radius: 16px;
+      width: fit-content;
+      margin-top: 20px;
+      background-color: var(--light-color);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #f6fbff;
+      }
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@include big-desktop {
+  .ci-image {
+    margin-top: 30px;
+  }
+
+  .company-intro {
+    .ci-description {
+      max-width: 477px;
+    }
+  }
+}
+
+@include tablet {
+  .company-intro {
+    .ci-info {
+      margin-top: 30px;
+    }
+
+    .ci-heading {
+      &__title {
+        @include f(32px, 42px, 600);
+      }
+    }
+
+    .ci-description {
+      max-width: 417px;
+    }
+  }
+}
+
+@include mobile-bg {
+  .company-intro {
+    .ci-info {
+      flex-direction: column;
+    }
+
+    .ci-description {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  }
+}
+
+@include mobile {
+  .ci-image {
+    margin-top: 20px;
+  }
+
+  .company-intro {
+    .ci-description {
+      &__link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include small-mobile {
+  .company-intro {
+    .ci-image {
+      margin-top: 20px;
+    }
+
+    .ci-heading {
+      &__title {
+        @include f(24px, 32px, 600);
+      }
+
+      &__subtitle {
+        @include f(15px, 20px, 400);
+      }
+    }
+
+    .ci-info {
+      margin-top: 20px;
+    }
+  }
+}

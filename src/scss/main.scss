@@ -9,6 +9,7 @@
 @import "./components/footer";
 @import "./components/contacts";
 @import "./components/form";
+@import "./components/company";
 
 h1 {
   @include f(74px, 96px, 600);

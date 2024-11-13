@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page-body">
+    <div class="is-main-layout">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="section-first company-intro">
+          <div class="container">
+            <h1>Мы revoseal</h1>
+            <div class="ci-image">
+              <img src="img/company-intro.png" alt="О компании" />
+            </div>
+            <div class="ci-info">
+              <div class="ci-heading">
+                <div class="ci-heading__subtitle">Кто мы?</div>
+                <h2 class="ci-heading__title">Наша история</h2>
+              </div>
+
+              <div class="ci-description">
+                <p>
+                  Revoseal является партнером перерабатывающей промышленности в
+                  области производства чрезвычайно эффективных прокладок и,
+                  помня об этом, приобрел продукцию, патенты и технические
+                  ноу-хау.
+                </p>
+                <p>
+                  В Revoseal инновационный потенциал, качество и технологии
+                  сочетаются с международным сервисом, профессиональным
+                  бухгалтерским учетом и техническими знаниями для
+                  удовлетворения требований конкретного сектора.
+                </p>
+                <a class="ci-description__link" href="">
+                  <span>Перейти к каталогу</span>
+                  @include('img/svg/arrowRightBlack.svg')
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-main products">
+          <div class="container">
+            <h2>Продукция</h2>
+            @include('partials/products.html')
+          </div>
+        </section>
+        <section class="section-main">
+          <div class="container">@include('partials/form.html')</div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>
