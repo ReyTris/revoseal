@@ -462,6 +462,10 @@ h3 {
 }
 
 @include mobile-bg {
+  h2 {
+    @include f(28px, 36px, 600);
+  }
+
   h3 {
     @include f(18px, 26px, 600);
   }
