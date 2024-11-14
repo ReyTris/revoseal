@@ -32,6 +32,10 @@ h2 {
   @include f(46px, 60px, 600);
 }
 
+h3 {
+  @include f(24px, 34px, 600);
+}
+
 .main-intro {
   @include flex-column-center;
 
@@ -458,6 +462,9 @@ h2 {
 }
 
 @include mobile-bg {
+  h3 {
+    @include f(18px, 26px, 600);
+  }
   .main-intro {
     .mi-header {
       flex-direction: column;

@@ -1,11 +1,15 @@
 console.log("components");
+import "./jquery.js";
 import { disableScroll } from "./functions/disable-scroll.js";
 import { enableScroll } from "./functions/enable-scroll.js";
+
+// const $ = require("jquery");
 
 const App = {
   init() {
     this.burger();
     this.langDropdown();
+    this.accordion();
   },
 
   burger() {
@@ -62,8 +66,6 @@ const App = {
 
   langDropdown() {
     const dropdown = document.querySelectorAll("[data-button]");
-    console.log(dropdown);
-
     dropdown.forEach((el) => {
       const dropdownWrapper = el.querySelector(".hl-dropdown");
       el.addEventListener("click", () => {
@@ -74,6 +76,19 @@ const App = {
         if (!dropdownWrapper.contains(e.target) && !el.contains(e.target)) {
           dropdownWrapper.classList.remove("hl-dropdown--active");
         }
+      });
+    });
+  },
+
+  accordion() {
+    const accordion = document?.querySelector("[data-accordion]");
+    const accordionItems = accordion?.querySelectorAll("[data-accordion-item]");
+
+    $(accordionItems).each((i, el) => {
+      const accordionItemHeader = $(el).find(".sl-accordion-item-header");
+      accordionItemHeader.on("click", () => {
+        $(el).toggleClass("sl-accordion-item--active");
+        $(el).find(".sl-accordion-item-info").slideToggle();
       });
     });
   },
