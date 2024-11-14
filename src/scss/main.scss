@@ -10,6 +10,7 @@
 @import "./components/contacts";
 @import "./components/form";
 @import "./components/company";
+@import "./components/services";
 
 h1 {
   @include f(74px, 96px, 600);

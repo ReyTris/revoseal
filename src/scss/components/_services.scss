@@ -1,0 +1,277 @@
+.services-intro {
+  h1 {
+    @include f(48px, 48px, 600);
+    color: var(--main-color);
+  }
+  .si-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  .si-info {
+    max-width: 436px;
+
+    &__description {
+      margin-top: 30px;
+    }
+
+    &__link {
+      margin-top: 20px;
+      padding: 18px 75px;
+    }
+  }
+
+  .si-image {
+    max-width: 570px;
+  }
+}
+
+.tar-service {
+  .ts-block {
+    @include is-grid(3, 30, 30);
+  }
+
+  .ts-item {
+    background-color: var(--light-color);
+    padding: 20px;
+    border: 1px solid var(--gray-color);
+
+    &__text {
+      margin-top: 20px;
+    }
+  }
+
+  .ts-item-image {
+    position: relative;
+
+    &__title {
+      @include font(var(--light-color), 20px, 26px, 600);
+
+      position: absolute;
+      top: 96px;
+      left: 20px;
+    }
+
+    img {
+      border-radius: 24px;
+    }
+
+    &__corner {
+      position: absolute;
+      width: 20px;
+      height: 76px;
+      left: 76px;
+      z-index: 10;
+      background-color: var(--light-color);
+      border-radius: 0 0 16px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -24px;
+        top: 0;
+        border-radius: 24px 0 0 0;
+        width: 24px;
+        height: 21px;
+        box-shadow: -6px -3px 0 3px var(--light-color);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 24px 0 0 0;
+        width: 24px;
+        height: 21px;
+        background-color: var(--light-color);
+      }
+    }
+
+    &__corner-2 {
+      position: absolute;
+      height: 20px;
+      width: 76px;
+      top: 56px;
+      z-index: 10;
+      background-color: var(--light-color);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 20px;
+        border-radius: 24px 0 0 0;
+        width: 24px;
+        height: 24px;
+        box-shadow: -6px -5px 0 3px var(--light-color);
+      }
+    }
+
+    &__corner-3 {
+      position: absolute;
+      height: 77px;
+      width: 97px;
+      top: -21px;
+      left: -21px;
+      z-index: 10;
+      border-right: 1px solid var(--gray-color);
+      border-bottom: 1px solid var(--gray-color);
+      background-color: #fff;
+      border-radius: 0 0 16px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -24px;
+        top: 0;
+        border-radius: 24px 0 0 0;
+        border-top: 1px solid var(--gray-color);
+        border-left: 1px solid var(--gray-color);
+        width: 24px;
+        height: 21px;
+        box-shadow: -6px -3px 0 3px #fff;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -24px;
+        border-radius: 24px 0 0 0;
+        border-top: 1px solid var(--gray-color);
+        border-left: 1px solid var(--gray-color);
+        width: 24px;
+        height: 24px;
+        box-shadow: -6px -3px 0 3px #fff;
+      }
+    }
+  }
+}
+
+@include big-desktop {
+  .tar-service {
+    .ts-item-image {
+      &__title {
+        @include f(16px, 20px, 600);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .services-intro {
+    h1 {
+      @include f(36px, 36px, 600);
+    }
+
+    .si-block {
+      gap: 20px;
+    }
+
+    .si-info {
+      max-width: 336px;
+    }
+  }
+
+  .tar-service {
+    .ts-block {
+      @include is-grid(2, 20, 20);
+    }
+  }
+}
+
+@include mobile-bg {
+  .services-intro {
+    .si-block {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .si-image {
+      max-width: 400px;
+    }
+  }
+
+  .tar-service {
+    .ts-block {
+      @include is-grid(1, 0, 55);
+    }
+
+    .ts-item-image {
+      &__title {
+        top: auto;
+        bottom: 20px;
+        @include f(15px, 20px, 600);
+      }
+
+      &__corner {
+        position: absolute;
+        width: 20px;
+        height: 64px;
+        left: 43px;
+        z-index: 10;
+        background-color: var(--light-color);
+        border-radius: 0 0 16px;
+      }
+
+      &__corner-2 {
+        height: 20px;
+        width: 46px;
+        top: 44px;
+        z-index: 10;
+        background-color: var(--light-color);
+      }
+
+      &__corner-3 {
+        height: 66px;
+        width: 64px;
+        top: -21px;
+        left: -21px;
+        z-index: 10;
+        border-right: 1px solid var(--gray-color);
+        border-bottom: 1px solid var(--gray-color);
+        background-color: #fff;
+        border-radius: 0 0 16px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .services-intro {
+    .si-info {
+      max-width: 100%;
+
+      &__link {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include small-mobile {
+  .services-intro {
+    h1 {
+      @include f(28px, 28px, 600);
+    }
+    .si-info {
+      &__link {
+        width: 100%;
+      }
+    }
+  }
+
+  .tar-service {
+    .ts-block {
+      @include is-grid(1, 0, 20);
+    }
+
+    .ts-item-image {
+      img {
+        height: 166px;
+      }
+    }
+  }
+}

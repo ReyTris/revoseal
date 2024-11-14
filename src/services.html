@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page-body">
+    <div class="is-main-layout">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="section-first services-intro">
+          <div class="container">
+            <div class="si-block">
+              <div class="si-info">
+                <h1>
+                  <span class="c-blue">Многолетний опыт</span><br />
+                  и компетентность.
+                </h1>
+                <div class="si-info__description">
+                  <p>
+                    Бесперебойная работа вашего оборудования определяет
+                    эффективную и прибыльную производительность вашего бизнеса
+                  </p>
+                  <p>
+                    В химической, нефтехимической, газодобывающей и смежных
+                    отраслях промышленности центральную роль играют небольшие и
+                    почти невидимые элементы установки или колонны: уплотнения.
+                  </p>
+                </div>
+                <a class="btn-light si-info__link" href="">
+                  <span>Подробнее</span>
+                  @include('img/svg/arrowRightBlack.svg')
+                </a>
+              </div>
+              <div class="si-image">
+                <img
+                  class="br-16"
+                  src="img/services-intro.png"
+                  alt="Многолетний опыт и компетентность."
+                  width="570"
+                  height="574"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-main tar-service">
+          <div class="container">
+            <div class="tar-service-subtitle">Что мы предоставляем?</div>
+            <h2>Услуга revoseal TAR</h2>
+            <div class="content-block ts-block">
+              <div class="is-grid">
+                <div class="ts-item main-round">
+                  <div class="ts-item-image">
+                    <div class="ts-item-image__title">
+                      Технический анализ и экспертная поддержка
+                    </div>
+                    <div class="ts-item-image__corner"></div>
+                    <div class="ts-item-image__corner-2"></div>
+                    <div class="ts-item-image__corner-3"></div>
+                    <img
+                      src="img/tar-1.jpg"
+                      alt="Технический анализ и экспертная поддержка"
+                    />
+                  </div>
+                  <p class="ts-item__text">
+                    Мы заботимся о бесперебойной работе и устранении
+                    технологических сбоев и/или неисправностей. „Проблемные
+                    случаи". Диагностируются критические для работы установки
+                    положения и разрабатываются меры по их устранению.
+                  </p>
+                </div>
+                <div class="ts-item main-round">
+                  <div class="ts-item-image">
+                    <div class="ts-item-image__title">
+                      Максимально возможный контроль качества при монтаже
+                      фланцев
+                    </div>
+                    <div class="ts-item-image__corner"></div>
+                    <div class="ts-item-image__corner-2"></div>
+                    <div class="ts-item-image__corner-3"></div>
+                    <img
+                      src="img/tar-2.jpg"
+                      alt="Максимально возможный контроль качества при монтаже
+                    фланцев"
+                    />
+                  </div>
+                  <p class="ts-item__text">
+                    Строгое соблюдение сроков простоя и бюджета во время проекта
+                    TAR требует от оператора бесперебойного и своевременного
+                    запуска всех остановленных установок. Утечки, возникающие
+                    при запуске и вызванные неправильной сборкой, нередко
+                    приводят к значительным временным задержкам и, как
+                    следствие, к перерасходу бюджета.
+                  </p>
+                </div>
+                <div class="ts-item main-round">
+                  <div class="ts-item-image">
+                    <div class="ts-item-image__title">
+                      Расчет фланцевых соединений в соответствии с DIN EN 1591-1
+                    </div>
+                    <div class="ts-item-image__corner"></div>
+                    <div class="ts-item-image__corner-2"></div>
+                    <div class="ts-item-image__corner-3"></div>
+                    <img
+                      src="img/tar-3.jpg"
+                      alt="Расчет фланцевых соединений в соответствии с DIN EN 1591-1"
+                    />
+                  </div>
+                  <p class="ts-item__text">
+                    Мы рассчитаем моменты затяжки для установки фланцевых
+                    соединений и тем самым предоставим вам расчетное
+                    доказательство герметичности в соответствии с TA Luft / VDI
+                    2290. Для точного выполнения расчета нам потребуются от вас
+                    характеристики используемых компонентов (фланцы, уплотнения
+                    и болты).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-main">
+          <div class="container">@include('partials/form.html')</div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

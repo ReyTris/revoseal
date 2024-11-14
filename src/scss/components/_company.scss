@@ -24,35 +24,57 @@
     max-width: 570px;
 
     &__link {
-      display: flex;
-      align-items: center;
-      padding: 18px 32px;
-      border: 1px solid var(--main-color);
-      border-radius: 16px;
-      width: fit-content;
       margin-top: 20px;
-      background-color: var(--light-color);
+    }
+  }
+}
+
+.geography {
+  .g-map {
+    @include flex-all-center;
+  }
+
+  .g-tabs {
+    @include is-grid(6, 30, 30);
+
+    margin-top: 30px;
+
+    &-item {
+      justify-items: center;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 16px;
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: #f6fbff;
+        border: 1px solid var(--blue-color);
+        background-color: rgba(#0387ea, 0.05);
       }
+    }
 
-      svg {
-        margin-left: 10px;
-      }
+    &-item--active {
+      border: 1px solid var(--blue-color);
+      background-color: rgba(#0387ea, 0.05);
     }
   }
 }
 
 @include big-desktop {
-  .ci-image {
-    margin-top: 30px;
-  }
-
   .company-intro {
+    .ci-image {
+      margin-top: 30px;
+    }
+
     .ci-description {
       max-width: 477px;
+    }
+  }
+
+  .geography {
+    .g-tabs {
+      @include is-grid(6, 20, 20);
+
+      margin-top: 20px;
     }
   }
 }
@@ -71,6 +93,12 @@
 
     .ci-description {
       max-width: 417px;
+    }
+  }
+
+  .geography {
+    .g-tabs {
+      @include is-grid(3, 20, 20);
     }
   }
 }
@@ -97,7 +125,6 @@
     .ci-description {
       &__link {
         width: 100%;
-        justify-content: center;
       }
     }
   }
