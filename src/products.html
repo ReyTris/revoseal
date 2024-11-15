@@ -4,14 +4,130 @@
 
   <body class="page-body">
     <div class="is-main-layout">
-      <div class="container">
-        @include('partials/header.html')
-        <main class="main">
-          <section class="main-intro">Products</section>
-        </main>
-        @include('partials/footer.html')
-      </div>
-      <!-- @include('html/h1.html') пример include -->
+      @include('partials/header.html')
+      <main class="main">
+        <section class="section-first products-tabs">
+          <div class="container">
+            <div class="pt-block">
+              <div class="pt-menu">
+                <div class="pt-menu-title">Категории</div>
+                <ul class="pt-menu-list">
+                  <li class="pt-menu-item">
+                    <span>Все категории</span>
+                  </li>
+                  <li class="pt-menu-item pt-menu-item--active">
+                    <span>Экспандированная ПТФЭ</span>
+                  </li>
+                  <li class="pt-menu-item">
+                    <span>Заполненный ПТФЭ</span>
+                  </li>
+                  <li class="pt-menu-item">
+                    <span>ПТФЭ Фторопластовые</span>
+                  </li>
+                  <li class="pt-menu-item">
+                    <span>Сальникова Набивка</span>
+                  </li>
+                  <li class="pt-menu-item">
+                    <span>Безасбестовый Паронит</span>
+                  </li>
+                  <li class="pt-menu-item">
+                    <span>Прокладка Металлическая</span>
+                  </li>
+                  <li class="pt-menu-item">
+                    <span>Изолирующие Прокладки</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-content" data-tab="0">
+                <div class="is-grid">
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">
+                      Расширенный Лист из ПТФЭ
+                    </div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-1.png" alt="Расширенный Лист из ПТФЭ" />
+                    </div>
+                  </div>
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">
+                      Экспандированная ПТФЭ Прокладки
+                    </div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">
+                      Расширенная Уплотнительная Лента из ПТФЭ
+                    </div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-3.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">
+                      Экспандированная ПТФЭ Лента
+                    </div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-4.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">
+                      Шнур PTFE фTоропластовый
+                    </div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-5.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-content pt-content--active" data-tab="1">
+                <div class="is-grid">
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">Расширенный Лист и</div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-1.png" alt="Расширенный Лист из ПТФЭ" />
+                    </div>
+                  </div>
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">
+                      Экспандированная ПТ
+                    </div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">
+                      Расширенная Уплотнитель
+                    </div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-3.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">Экспандированн</div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-4.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="pt-content-item">
+                    <div class="pt-content-item__title">Шнур PTFE</div>
+                    <div class="pt-content-item__image">
+                      <img src="img/pt-5.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-main">
+          <div class="container">@include('partials/form.html')</div>
+        </section>
+      </main>
+      @include('partials/footer.html')
     </div>
   </body>
 </html>

@@ -10,6 +10,7 @@ const App = {
     this.burger();
     this.langDropdown();
     this.accordion();
+    this.productsTabs();
   },
 
   burger() {
@@ -89,6 +90,19 @@ const App = {
       accordionItemHeader.on("click", () => {
         $(el).toggleClass("sl-accordion-item--active");
         $(el).find(".sl-accordion-item-info").slideToggle();
+      });
+    });
+  },
+
+  productsTabs() {
+    let activeTab = 0;
+    $(".pt-menu-item").each((i, el) => {
+      $(el).on("click", () => {
+        $(".pt-menu-item").removeClass("pt-menu-item--active");
+        $(el).addClass("pt-menu-item--active");
+        activeTab = i;
+        $(".pt-content").removeClass("pt-content--active");
+        $(`[data-tab=${i}]`).addClass("pt-content--active");
       });
     });
   },

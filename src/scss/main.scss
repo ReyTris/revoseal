@@ -11,6 +11,7 @@
 @import "./components/form";
 @import "./components/company";
 @import "./components/services";
+@import "./components/products";
 
 h1 {
   @include f(74px, 96px, 600);
