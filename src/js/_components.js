@@ -3,7 +3,8 @@ import "./jquery.js";
 import { disableScroll } from "./functions/disable-scroll.js";
 import { enableScroll } from "./functions/enable-scroll.js";
 
-// const $ = require("jquery");
+import Swiper from "swiper";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 const App = {
   init() {
@@ -11,6 +12,7 @@ const App = {
     this.langDropdown();
     this.accordion();
     this.productsTabs();
+    this.sliderProducts();
   },
 
   burger() {
@@ -95,15 +97,35 @@ const App = {
   },
 
   productsTabs() {
-    let activeTab = 0;
     $(".pt-menu-item").each((i, el) => {
       $(el).on("click", () => {
         $(".pt-menu-item").removeClass("pt-menu-item--active");
         $(el).addClass("pt-menu-item--active");
-        activeTab = i;
         $(".pt-content").removeClass("pt-content--active");
         $(`[data-tab=${i}]`).addClass("pt-content--active");
       });
+    });
+  },
+
+  sliderProducts() {
+    const mainImage = document.querySelector(".pd-image__full img");
+    Swiper.use([Navigation, Pagination, Scrollbar]);
+    const swiper = new Swiper(".swiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      autoplay: false,
+      grabCursor: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      on: {
+        click(i, e) {
+          if (e.target.tagName === "IMG") {
+            console.log("click", e);
+            mainImage.src = e.target.currentSrc;
+          }
+        },
+      },
     });
   },
 };

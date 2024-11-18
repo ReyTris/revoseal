@@ -12,7 +12,7 @@
 @import "./components/company";
 @import "./components/services";
 @import "./components/products";
-
+@import "./components/product-detail";
 h1 {
   @include f(74px, 96px, 600);
 
@@ -470,6 +470,7 @@ h3 {
   h3 {
     @include f(18px, 26px, 600);
   }
+
   .main-intro {
     .mi-header {
       flex-direction: column;

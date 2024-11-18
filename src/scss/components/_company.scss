@@ -5,8 +5,8 @@
 
   .ci-info {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
     margin-top: 50px;
   }
 
@@ -41,10 +41,10 @@
 
     &-item {
       justify-items: center;
-      cursor: pointer;
       border: 1px solid transparent;
       border-radius: 16px;
       transition: all 0.3s ease;
+      cursor: pointer;
 
       &:hover {
         border: 1px solid var(--blue-color);

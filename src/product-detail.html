@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page-body">
+    <div class="is-main-layout">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="section-first product-detail">
+          <div class="container">
+            <a href="#" class="pd-link-back"
+              >@include('img/svg/arrowLeft.svg')<span
+                >Вернуться к продуктам</span
+              ></a
+            >
+            <div class="pd-block">
+              <div class="pd-image">
+                <div class="pd-image__full">
+                  <img src="img/detail.png" alt="" />
+                </div>
+                <div class="pd-image-slider">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          class="swiper-slide-image"
+                          src="img/product-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="swiper-slide-image"
+                          src="img/product-2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="swiper-slide-image"
+                          src="img/product-3.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="swiper-slide-image"
+                          src="img/product-4.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="swiper-slide-image"
+                          src="img/product-1.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pd-description">
+                <h1>revoseal JG/JP</h1>
+                <div class="pd-description__text">
+                  <p>
+                    Запатентованная на международном уровне геометрия верхнего
+                    внешнего и внутреннего зубьев полностью инкапсулирует
+                    графитовую или фторопластовую подложку.
+                  </p>
+                  <p>
+                    Геометрия зубьев рассчитана таким образом, что даже при
+                    использовании винтов низкого качества может быть достигнуто
+                    идеальное уплотнение графита и двойное металлическое
+                    уплотнение. Revoseal JG или JP (герметизированное уплотнение
+                    с плоским профилем) идеально сочетает в себе преимущества
+                    металлического уплотнения и уплотнения из мягких материалов.
+                  </p>
+                </div>
+              </div>
+              <div class="pd-character">
+                <div class="pd-character__title">Основные характеристики</div>
+                <ul class="pd-character__list">
+                  <li class="pd-character__item">
+                    @include('img/svg/romb.svg')
+                    <span
+                      >Самый низкий уровень утечки среди всех имеющихся на рынке
+                      уплотнений</span
+                    >
+                  </li>
+                  <li class="pd-character__item">
+                    @include('img/svg/romb.svg')
+                    <span
+                      >Температура: от - 270°C до + 1000°C (от-328°F до 1832°F)
+                      (в зависимости от материала подложки)</span
+                    >
+                  </li>
+                  <li class="pd-character__item">
+                    @include('img/svg/romb.svg')
+                    <span>Давление: от вакуума до 400 бар (1500 фунтов)</span>
+                  </li>
+                  <li class="pd-character__item">
+                    @include('img/svg/romb.svg')
+                    <span
+                      >Стандартный материал: 1.4571 (Дополнительные материалы по
+                      запросу)</span
+                    >
+                  </li>
+                  <li class="pd-character__item">
+                    @include('img/svg/romb.svg')
+                    <span>
+                      Сертификаты: EN 13555 Характеристики уплотнений,
+                      соответствие требованиям FDA (версия из ПТФЭ), Firesafe
+                      API607 / DIN EN ISO 10497, воздух TA (вкл. Защита от
+                      продувки по стандарту VDI 2200)
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-main product-table">
+          <div class="container">
+            <h2>Видео о продукте JG-JP</h2>
+            <div class="video-player">
+              <div class="vp-button-play">@include('img/svg/play.svg')</div>
+              <img src="img/poster.png" alt="" />
+              <video class="vp-video">
+                <source src="" type="video/mp4" />
+              </video>
+            </div>
+            <div class="pt-table">
+              <div class="pt-item pt-item--header">
+                <div class="pt-item__type">Тип</div>
+                <div class="pt-item__image">Поперечное сечение</div>
+                <div class="pt-item__info">Обозначение</div>
+              </div>
+              <div class="pt-item">
+                <div class="pt-item__type">JG/JP 1</div>
+                <div class="pt-item__image">
+                  <img src="img/type-1.png" alt="" />
+                </div>
+                <div class="pt-item__info">
+                  <p>
+                    Герметизированное плоское профильное уплотнение для шпунта,
+                    паза, выступа и углубления согласно DIN EN 1514-4 TG и SR.
+                  </p>
+                </div>
+                <a href="" class="pt-item__link"
+                  >Скачать PDF @include('img/svg/arrowRightBlue.svg')</a
+                >
+              </div>
+              <div class="pt-item">
+                <div class="pt-item__type">JG 2</div>
+                <div class="pt-item__image">
+                  <img src="img/type-1.png" alt="" />
+                </div>
+                <div class="pt-item__info">
+                  <p>
+                    Gekapselte Flachprofildichtung mit Zentrierring und
+                    Sollbruchnut für Flansche mit glatter Dichtleiste Form A und
+                    B nach DIN EN 1092–1 sowie für Flansche nach ANSI B 16.5 / B
+                    16.47-A und B 16.47-B.
+                  </p>
+                </div>
+                <a href="" class="pt-item__link"
+                  >Скачать PDF @include('img/svg/arrowRightBlue.svg')</a
+                >
+              </div>
+              <div class="pt-item">
+                <div class="pt-item__type">JP 2</div>
+                <div class="pt-item__image">
+                  <img src="img/type-1.png" alt="" />
+                </div>
+                <div class="pt-item__info">
+                  <p>
+                    Герметичная плоская прокладка с центрирующим кольцом и
+                    заданной разрывной канавкой для фланцев с гладкой
+                    уплотнительной лентой формы A и B согласно DIN EN 1092-1, а
+                    также для фланцев согласно ANSI B 16.5 / B 16.47-A и B
+                    16.47-B. Рекомендуется для давления выше 200 бар и
+                    температуры выше 500 °C.
+                  </p>
+                </div>
+                <a href="" class="pt-item__link"
+                  >Скачать PDF @include('img/svg/arrowRightBlue.svg')</a
+                >
+              </div>
+              <div class="pt-item">
+                <div class="pt-item__type">JP Top</div>
+                <div class="pt-item__image">
+                  <img src="img/type-1.png" alt="" />
+                </div>
+                <div class="pt-item__info">
+                  <p>
+                    JP Top имеет те же свойства, что и JP 2. Однако он также
+                    имеет вторичное уплотнение из графита или ПТФЭ. Такая
+                    конструкция особенно подходит для холодноходных труб,
+                    образующих в атмосфере агрессивную среду.
+                  </p>
+                </div>
+                <a href="" class="pt-item__link"
+                  >Скачать PDF @include('img/svg/arrowRightBlue.svg')</a
+                >
+              </div>
+              <div class="pt-item">
+                <div class="pt-item__type">Vario</div>
+                <div class="pt-item__image">
+                  <img src="img/type-1.png" alt="" />
+                </div>
+                <div class="pt-item__info">
+                  <p>
+                    Уплотнения JG и JP также доступны с нашей системой
+                    центрирования Vario (см. «Система возврата Vario»).
+                  </p>
+                </div>
+                <a href="" class="pt-item__link"
+                  >Скачать PDF @include('img/svg/arrowRightBlue.svg')</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-main products">
+          <div class="container">
+            <h2>Продукция <span class="c-blue">revoseal</span></h2>
+            @include('partials/products.html')
+          </div>
+        </section>
+        <section class="section-main">
+          <div class="container">@include('partials/form.html')</div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

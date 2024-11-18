@@ -1,0 +1,310 @@
+.product-detail {
+  .pd-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .pd-link-back {
+    @include flex-all-center;
+    width: fit-content;
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  .pd-image {
+    grid-row: 1/3;
+    min-width: 0;
+
+    &__full {
+      img {
+        border-radius: 16px;
+        width: 100%;
+      }
+    }
+  }
+
+  .pd-image-slider {
+    margin-top: 30px;
+    width: 100%;
+
+    .swiper {
+      width: auto;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .swiper-slide {
+      min-width: 0;
+      @include flex-all-center;
+      height: 170px;
+    }
+
+    .swiper-scrollbar {
+      .swiper-scrollbar-drag {
+        background-color: var(--blue-color);
+      }
+    }
+  }
+
+  .pd-description {
+    min-width: 0;
+    h1 {
+      @include font(var(--main-color), 46px, 60px, 600);
+    }
+
+    &__text {
+      margin-top: 10px;
+    }
+  }
+
+  .pd-character {
+    min-width: 0;
+    grid-column: 2/3;
+    margin-top: 30px;
+
+    &__title {
+      @include f(18px, 26px, 600);
+    }
+
+    &__list {
+      border-top: 1px solid var(--gray-color);
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+
+    &__item {
+      position: relative;
+      padding-left: 20px;
+      margin-top: 10px;
+
+      svg {
+        position: absolute;
+        top: 3px;
+        left: 0;
+      }
+
+      span {
+        @include f(16px, 24px, 400);
+      }
+    }
+  }
+}
+
+.product-table {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .video-player {
+    position: relative;
+    max-width: 770px;
+    margin-top: 40px;
+
+    .vp-button-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      border: 1px solid var(--light-color);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: var(--blue-color);
+        svg {
+          path {
+            fill: var(--blue-color);
+          }
+        }
+      }
+
+      svg {
+        path {
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    .vp-poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .vp-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &.state-play {
+      .vp-button-play {
+        display: none;
+      }
+      .vp-poster {
+        display: none;
+      }
+    }
+  }
+
+  .pt-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+  }
+
+  .pt-item {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--gray-color);
+    background-color: var(--light-color);
+
+    &__type {
+    }
+
+    &__image {
+      grid-column: 2/4;
+    }
+
+    &__info {
+      grid-column: 4/6;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      color: var(--blue-color);
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+
+    &--header {
+      @include f(16px, 26px, 500);
+      border: none;
+      padding: 0 30px;
+      background-color: transparent;
+    }
+  }
+}
+
+@include tablet {
+  .product-detail {
+    .pd-block {
+      grid-template-rows: 1fr;
+    }
+
+    .pd-image {
+      grid-row: 1/2;
+    }
+
+    .pd-description {
+      h1 {
+        @include f(36px, 40px, 600);
+      }
+    }
+
+    .pd-character {
+      grid-column: 1/3;
+    }
+
+    .pd-image-slider {
+      .swiper-slide {
+        height: 105px;
+      }
+    }
+  }
+}
+
+@include mobile-bg {
+  .product-detail {
+    .pd-block {
+      grid-template-columns: 1fr;
+
+      grid-template-rows: 1fr;
+    }
+
+    .pd-image {
+      grid-column: 1/2;
+    }
+
+    .pd-description {
+      grid-column: 1/2;
+      margin-top: 20px;
+
+      h1 {
+        @include f(28px, 36px, 600);
+      }
+    }
+
+    .pd-character {
+      grid-column: 1/2;
+    }
+
+    .pd-image-slider {
+      margin-top: 30px;
+      width: 100%;
+
+      .swiper {
+        width: auto;
+      }
+
+      .swiper-wrapper {
+        margin-bottom: 40px;
+      }
+
+      .swiper-slide {
+        min-width: 0;
+        @include flex-all-center;
+        height: auto;
+      }
+    }
+  }
+
+  .product-table {
+    .pt-item {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      &__image {
+        grid-column: 1/2;
+      }
+
+      &__info {
+        grid-column: 1/2;
+      }
+
+      &--header {
+        display: none;
+      }
+    }
+  }
+}

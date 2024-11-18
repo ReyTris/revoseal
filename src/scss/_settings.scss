@@ -79,9 +79,10 @@ textarea {
 
 .btn-light {
   @include flex-all-center;
-  padding: 18px 32px;
+
   border: 1px solid var(--main-color);
   border-radius: 16px;
+  padding: 18px 32px;
   width: fit-content;
   background-color: var(--light-color);
   transition: all 0.3s ease;

@@ -1,8 +1,10 @@
 .services-intro {
   h1 {
     @include f(48px, 48px, 600);
+
     color: var(--main-color);
   }
+
   .si-block {
     display: flex;
     justify-content: space-between;
@@ -33,9 +35,9 @@
   }
 
   .ts-item {
-    background-color: var(--light-color);
-    padding: 20px;
     border: 1px solid var(--gray-color);
+    padding: 20px;
+    background-color: var(--light-color);
 
     &__text {
       margin-top: 20px;
@@ -49,8 +51,8 @@
       @include font(var(--light-color), 20px, 26px, 600);
 
       position: absolute;
-      top: 96px;
       left: 20px;
+      top: 96px;
     }
 
     img {
@@ -59,19 +61,19 @@
 
     &__corner {
       position: absolute;
-      width: 20px;
-      height: 76px;
       left: 76px;
       z-index: 10;
-      background-color: var(--light-color);
       border-radius: 0 0 16px;
+      width: 20px;
+      height: 76px;
+      background-color: var(--light-color);
 
       &::before {
         content: "";
         position: absolute;
         right: -24px;
         top: 0;
-        border-radius: 24px 0 0 0;
+        border-radius: 24px 0 0;
         width: 24px;
         height: 21px;
         box-shadow: -6px -3px 0 3px var(--light-color);
@@ -82,7 +84,7 @@
         position: absolute;
         right: 15px;
         bottom: 15px;
-        border-radius: 24px 0 0 0;
+        border-radius: 24px 0 0;
         width: 24px;
         height: 21px;
         background-color: var(--light-color);
@@ -91,10 +93,10 @@
 
     &__corner-2 {
       position: absolute;
-      height: 20px;
-      width: 76px;
       top: 56px;
       z-index: 10;
+      width: 76px;
+      height: 20px;
       background-color: var(--light-color);
 
       &::before {
@@ -102,7 +104,7 @@
         position: absolute;
         left: 0;
         top: 20px;
-        border-radius: 24px 0 0 0;
+        border-radius: 24px 0 0;
         width: 24px;
         height: 24px;
         box-shadow: -6px -5px 0 3px var(--light-color);
@@ -111,24 +113,24 @@
 
     &__corner-3 {
       position: absolute;
-      height: 77px;
-      width: 97px;
-      top: -21px;
       left: -21px;
+      top: -21px;
       z-index: 10;
       border-right: 1px solid var(--gray-color);
       border-bottom: 1px solid var(--gray-color);
-      background-color: #fff;
       border-radius: 0 0 16px;
+      width: 97px;
+      height: 77px;
+      background-color: #fff;
 
       &::before {
         content: "";
         position: absolute;
         right: -24px;
         top: 0;
-        border-radius: 24px 0 0 0;
         border-top: 1px solid var(--gray-color);
         border-left: 1px solid var(--gray-color);
+        border-radius: 24px 0 0;
         width: 24px;
         height: 21px;
         box-shadow: -6px -3px 0 3px #fff;
@@ -139,9 +141,9 @@
         position: absolute;
         left: 0;
         bottom: -24px;
-        border-radius: 24px 0 0 0;
         border-top: 1px solid var(--gray-color);
         border-left: 1px solid var(--gray-color);
+        border-radius: 24px 0 0;
         width: 24px;
         height: 24px;
         box-shadow: -6px -3px 0 3px #fff;
@@ -153,13 +155,14 @@
 .services-list {
   .sl-accordion {
     @include flex-column-center;
+
     gap: 10px;
 
     &-item {
+      border: 1px solid var(--gray-color);
+      padding: 30px;
       width: 100%;
       background-color: var(--light-color);
-      padding: 30px;
-      border: 1px solid var(--gray-color);
 
       &__content {
         max-width: 410px;
@@ -167,8 +170,9 @@
 
       &__link {
         @include flex-all-center;
-        width: fit-content;
+
         margin-top: 30px;
+        width: fit-content;
 
         span {
           color: var(--blue-color);
@@ -192,10 +196,11 @@
     }
 
     &-item-info {
-      margin-top: 20px;
       display: none;
+      margin-top: 20px;
     }
   }
+
   .sl-accordion-item--active {
     .sl-accordion-item-header {
       svg {
@@ -218,18 +223,19 @@
 
   .ex-list {
     position: absolute;
-    top: 20px;
     left: 0;
+    top: 20px;
     max-width: 513px;
-    @include flex-column-center;
     gap: 10px;
+
+    @include flex-column-center;
   }
 
   .ex-item {
-    background-color: var(--light-color);
-    border-radius: 24px;
     border: 1px solid var(--gray-color);
+    border-radius: 24px;
     padding: 20px;
+    background-color: var(--light-color);
   }
 }
 
@@ -238,6 +244,7 @@
     position: relative;
     margin-top: 240px;
   }
+
   .res-image {
     position: absolute;
     left: 40px;
@@ -247,14 +254,15 @@
       border-radius: 16px;
     }
   }
+
   .res-info {
+    border-radius: 16px;
     padding: 40px 90px;
     background-color: var(--blue-color);
-    border-radius: 16px;
 
     &-content {
-      max-width: 478px;
       margin-left: auto;
+      max-width: 478px;
       color: var(--light-color);
     }
 
@@ -290,9 +298,11 @@
       position: relative;
       margin-top: 200px;
     }
+
     .res-image {
       width: 437px;
     }
+
     .res-info {
       padding: 28px 34px;
 
@@ -328,10 +338,10 @@
     .ex-block {
       flex-direction: column;
     }
+
     .ex-list {
       position: relative;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       align-items: normal;
       max-width: 100%;
     }
@@ -345,6 +355,7 @@
     .res-block {
       margin-top: 160px;
     }
+
     .res-image {
       position: absolute;
       left: 15px;
@@ -356,6 +367,7 @@
         height: 100%;
       }
     }
+
     .res-info {
       padding: 46px 41px 46px 15px;
 
@@ -387,37 +399,38 @@
       &__title {
         top: auto;
         bottom: 20px;
+
         @include f(15px, 20px, 600);
       }
 
       &__corner {
         position: absolute;
-        width: 20px;
-        height: 64px;
         left: 43px;
         z-index: 10;
-        background-color: var(--light-color);
         border-radius: 0 0 16px;
+        width: 20px;
+        height: 64px;
+        background-color: var(--light-color);
       }
 
       &__corner-2 {
-        height: 20px;
-        width: 46px;
         top: 44px;
         z-index: 10;
+        width: 46px;
+        height: 20px;
         background-color: var(--light-color);
       }
 
       &__corner-3 {
-        height: 66px;
-        width: 64px;
-        top: -21px;
         left: -21px;
+        top: -21px;
         z-index: 10;
         border-right: 1px solid var(--gray-color);
         border-bottom: 1px solid var(--gray-color);
-        background-color: #fff;
         border-radius: 0 0 16px;
+        width: 64px;
+        height: 66px;
+        background-color: #fff;
       }
     }
   }
@@ -432,26 +445,28 @@
     .res-block {
       margin-top: 120px;
     }
+
     .res-image {
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
-      bottom: auto;
       top: -20px;
+      bottom: auto;
       width: 90%;
-      max-width: 351px;
       height: 367px;
+      max-width: 351px;
+      transform: translateX(-50%);
 
       img {
         height: 100%;
       }
     }
+
     .res-info {
-      padding: 353px 20px 35px 20px;
+      padding: 353px 20px 35px;
 
       &-content {
-        width: 100%;
         margin: 0;
+        width: 100%;
       }
     }
   }
@@ -474,6 +489,7 @@
     h1 {
       @include f(28px, 28px, 600);
     }
+
     .si-info {
       &__link {
         width: 100%;
@@ -488,8 +504,8 @@
 
     .ts-item-image {
       img {
-        height: 166px;
         width: 100%;
+        height: 166px;
       }
     }
   }
@@ -498,6 +514,7 @@
     .sl-accordion {
       &-item {
         padding: 20px;
+
         &-header {
           svg {
             width: 30px;
@@ -515,14 +532,16 @@
     .res-block {
       margin-top: 160px;
     }
+
     .res-image {
-      bottom: auto;
       top: -20px;
+      bottom: auto;
       width: 90%;
       height: 251px;
     }
+
     .res-info {
-      padding: 253px 20px 35px 20px;
+      padding: 253px 20px 35px;
     }
   }
 }
