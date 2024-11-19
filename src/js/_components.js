@@ -13,6 +13,7 @@ const App = {
     this.accordion();
     this.productsTabs();
     this.sliderProducts();
+    this.geographyTabs();
   },
 
   burger() {
@@ -126,6 +127,23 @@ const App = {
           }
         },
       },
+    });
+  },
+
+  geographyTabs() {
+    $(".g-tabs-item").each((i, el) => {
+      $(el).on("click", () => {
+        console.log("click");
+        $(".g-tabs-item").removeClass("g-tabs-item--active");
+        $(el).addClass("g-tabs-item--active");
+        $(".g-map-item").removeClass("g-map-item--active");
+        $(`[data-card=${i + 1}]`).addClass("g-map-item--active");
+      });
+    });
+
+    $(".g-map-item__close").on("click", () => {
+      $(".g-map-item").removeClass("g-map-item--active");
+      $(".g-tabs-item").removeClass("g-tabs-item--active");
     });
   },
 };

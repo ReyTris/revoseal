@@ -32,6 +32,257 @@
 .geography {
   .g-map {
     @include flex-all-center;
+    max-width: 970px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  // .g-map-item {
+  //   position: absolute;
+  //   top: 23%;
+  //   left: 37%;
+  //   width: 756px;
+  //   min-height: 458px;
+  //   z-index: 20;
+  //   border: 1px solid var(--gray-color);
+  //   background-color: var(--light-color);
+  //   border-radius: 0 16px 0 16px;
+  //   padding: 20px;
+
+  //   &__close {
+  //     cursor: pointer;
+  //     position: absolute;
+  //     right: 0;
+  //     top: -37px;
+  //   }
+
+  //   &__point {
+  //     position: absolute;
+  //     top: 0;
+  //     left: -70px;
+  //   }
+
+  //   &__image {
+  //     position: relative;
+  //     z-index: 30;
+  //     top: -43px;
+  //     width: 372px;
+  //     height: 255px;
+
+  //     img {
+  //       width: 100%;
+  //       height: 100%;
+
+  //       border-radius: 16px;
+  //     }
+  //   }
+
+  //   &__content {
+  //     position: relative;
+  //     margin-top: -43px;
+  //     width: 372px;
+
+  //     &-title {
+  //       @include f(20px, 30px, 600);
+  //       margin-top: 20px;
+  //     }
+
+  //     &-subtitle {
+  //       @include font(var(--dark-gray-color), 13px, 19px, 400);
+  //       margin-top: 10px;
+  //     }
+
+  //     p {
+  //       margin-top: 10px;
+  //     }
+  //   }
+
+  //   &__certificate {
+  //     @include flex-all-center;
+  //     position: absolute;
+  //     right: 20px;
+  //     top: 20px;
+  //     height: 100%;
+  //     max-width: 324px;
+  //     z-index: 30;
+
+  //     img {
+  //       height: 100%;
+  //       width: 100%;
+  //     }
+  //   }
+
+  //   &__corner--top {
+  //     position: absolute;
+  //     left: 0px;
+  //     top: -43px;
+  //     z-index: 20;
+  //     border-top: 1px solid var(--gray-color);
+  //     border-right: 1px solid var(--gray-color);
+  //     border-radius: 16px 16px 0 0;
+  //     background-color: var(--light-color);
+  //     width: 412px;
+  //     height: 44px;
+
+  //     &:before {
+  //       content: "";
+  //       position: absolute;
+  //       right: -16px;
+  //       top: 26px;
+  //       border-radius: 0 0 0 16px;
+  //       width: 16px;
+  //       height: 16px;
+  //       background-color: transparent;
+  //       border-bottom: 1px solid var(--gray-color);
+  //       border-left: 1px solid var(--gray-color);
+  //       box-shadow: -5px 4px 0 3px var(--light-color);
+  //     }
+  //   }
+  //   &__corner--bottom {
+  //     position: absolute;
+  //     right: -1px;
+  //     bottom: -43px;
+  //     z-index: 20;
+  //     border-bottom: 1px solid var(--gray-color);
+  //     border-right: 1px solid var(--gray-color);
+  //     border-radius: 0 0 16px 16px;
+  //     background-color: var(--light-color);
+  //     width: 364px;
+  //     height: 44px;
+
+  //     &:before {
+  //       content: "";
+  //       position: absolute;
+  //       left: -16px;
+  //       bottom: 26px;
+  //       border-radius: 0 16px 0 0;
+  //       width: 16px;
+  //       height: 16px;
+  //       background-color: transparent;
+  //       border-top: 1px solid var(--gray-color);
+  //       border-right: 1px solid var(--gray-color);
+  //       box-shadow: 5px -5px 0 3px var(--light-color);
+  //     }
+  //   }
+  // }
+
+  .g-map-item {
+    position: absolute;
+    top: 33%;
+    left: 41%;
+    width: 756px;
+    height: 458px;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &__close {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: -37px;
+    }
+
+    &__point {
+      position: absolute;
+      top: -70px;
+      left: -70px;
+    }
+
+    &-left {
+      position: absolute;
+      bottom: 0;
+      right: calc(50% - 19px);
+      padding: 20px;
+      border: 1px solid var(--gray-color);
+      background-color: var(--light-color);
+      border-radius: 16px 16px 0 16px;
+      &:before {
+        content: "";
+        position: absolute;
+        right: 18px;
+        bottom: -17px;
+        z-index: 30;
+        border-radius: 0 16px 0 0;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border-top: 1px solid var(--gray-color);
+        border-right: 1px solid var(--gray-color);
+        box-shadow: 5px -5px 0 3px var(--light-color);
+      }
+    }
+
+    &-right {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      padding: 20px;
+      border: 1px solid var(--gray-color);
+      background-color: var(--light-color);
+      border-radius: 0 16px 16px 16px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 17px;
+        top: -16px;
+        border-radius: 0 0 0 16px;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border-bottom: 1px solid var(--gray-color);
+        border-left: 1px solid var(--gray-color);
+        box-shadow: -5px 4px 0 3px var(--light-color);
+      }
+    }
+
+    &-middle {
+      position: absolute;
+      z-index: 30;
+      width: 20px;
+      height: 101%;
+      top: -1%;
+      left: calc(50% - 2px);
+      background-color: var(--light-color);
+    }
+
+    &__content {
+      margin-top: 20px;
+
+      &-title {
+        @include f(20px, 30px, 600);
+      }
+
+      &-subtitle {
+        @include font(var(--dark-gray-color), 13px, 19px, 400);
+        margin-top: 10px;
+      }
+
+      p {
+        margin-top: 10px;
+      }
+    }
+
+    &--active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &--dmg,
+    &--vinci,
+    &--teflex,
+    &--jiaflon,
+    &--trisun {
+      top: 39%;
+      left: -18%;
+      .g-map-item__point {
+        top: 10px;
+        left: auto;
+        right: -70px;
+      }
+    }
   }
 
   .g-tabs {
