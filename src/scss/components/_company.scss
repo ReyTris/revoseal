@@ -190,6 +190,14 @@
       left: -70px;
     }
 
+    &__image {
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+      }
+    }
+
     &-left {
       position: absolute;
       bottom: 0;
@@ -322,6 +330,31 @@
   }
 
   .geography {
+    .g-map-item {
+      top: 48%;
+      left: 0;
+
+      &__point {
+        position: absolute;
+        top: -200px;
+        left: 45%;
+      }
+
+      &--dmg,
+      &--vinci,
+      &--teflex,
+      &--jiaflon,
+      &--trisun {
+        top: 60%;
+        left: 15%;
+
+        .g-map-item__point {
+          top: -29%;
+          right: 33%;
+        }
+      }
+    }
+
     .g-tabs {
       @include is-grid(6, 20, 20);
 
@@ -348,6 +381,36 @@
   }
 
   .geography {
+    .g-map {
+      width: 670px;
+    }
+    .g-map-item {
+      width: 696px;
+      top: 63%;
+      left: 0;
+
+      &__point {
+        position: absolute;
+        top: -210px;
+        left: 30%;
+      }
+
+      &__content {
+        &-title {
+          @include f(18px, 26px, 600);
+        }
+      }
+
+      &--dmg,
+      &--vinci,
+      &--teflex,
+      &--jiaflon,
+      &--trisun {
+        .g-map-item__point {
+          right: 34%;
+        }
+      }
+    }
     .g-tabs {
       @include is-grid(3, 20, 20);
     }
@@ -363,6 +426,68 @@
     .ci-description {
       margin-top: 20px;
       max-width: 100%;
+    }
+  }
+
+  .geography {
+    .g-map {
+      width: 100%;
+    }
+    .g-map-item {
+      width: 100%;
+      top: 40%;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+
+      &__point {
+        position: absolute;
+        top: -100px;
+        left: 32%;
+      }
+
+      &-left {
+        position: initial;
+        border-bottom: none;
+        border-radius: 16px 16px 0 0;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &-right {
+        @include flex-all-center;
+        position: initial;
+        border-top: none;
+        border-radius: 0 0 16px 16px;
+        margin-top: -2px;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &__image {
+        height: 160px;
+      }
+
+      &-middle {
+        display: none;
+      }
+
+      &--dmg,
+      &--vinci,
+      &--teflex,
+      &--jiaflon,
+      &--trisun {
+        top: 55%;
+        left: 0;
+        .g-map-item__point {
+          top: -85px;
+          right: 31%;
+        }
+      }
     }
   }
 }
@@ -399,6 +524,33 @@
 
     .ci-info {
       margin-top: 20px;
+    }
+  }
+
+  .geography {
+    .g-map-item {
+      &__point {
+        position: absolute;
+        top: -80px;
+        left: 28%;
+      }
+
+      &__image {
+        height: 106px;
+      }
+
+      &--dmg,
+      &--vinci,
+      &--teflex,
+      &--jiaflon,
+      &--trisun {
+        top: 55%;
+        left: 0;
+        .g-map-item__point {
+          top: -75px;
+          right: 28%;
+        }
+      }
     }
   }
 }
