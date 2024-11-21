@@ -49,6 +49,35 @@ a {
   text-decoration: none;
 }
 
+.is-link {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  span {
+    transition: all 0.3s ease;
+  }
+
+  svg {
+    path {
+      transition: all 0.3s ease;
+    }
+  }
+
+  &:hover {
+    color: var(--blue-color);
+
+    span {
+      color: var(--blue-color);
+    }
+
+    svg {
+      path {
+        fill: var(--blue-color);
+      }
+    }
+  }
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -96,10 +125,6 @@ textarea {
   }
 }
 
-.main-round {
-  border-radius: 24px;
-}
-
 .br-16 {
   border-radius: 16px;
 }
@@ -110,38 +135,6 @@ textarea {
 
 .c-blue {
   color: var(--blue-color);
-}
-
-.list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.input-reset {
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  border-radius: 0;
-  background-color: #fff;
-
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-results-button,
-  &::-webkit-search-results-decoration {
-    display: none;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
 }
 
 .container {
@@ -168,20 +161,6 @@ section {
 
 .centered {
   text-align: center;
-}
-
-.dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  overscroll-behavior: none;
-}
-
-.page--ios .dis-scroll {
-  position: relative;
 }
 
 .weight-600 {

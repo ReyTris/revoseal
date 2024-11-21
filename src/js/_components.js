@@ -56,6 +56,7 @@ const App = {
     window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
         disableBurger();
+        enableScroll();
       }
     });
 
@@ -64,7 +65,6 @@ const App = {
       burger?.setAttribute("aria-label", "Открыть меню");
       burger.classList.remove("burger--active");
       menu.classList.remove("menu--active");
-      // enableScroll();
     };
   },
 
