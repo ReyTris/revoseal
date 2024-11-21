@@ -14,6 +14,7 @@ const App = {
     this.productsTabs();
     this.sliderProducts();
     this.geographyTabs();
+    this.playVideo()
   },
 
   burger() {
@@ -146,6 +147,19 @@ const App = {
       $(".g-tabs-item").removeClass("g-tabs-item--active");
     });
   },
+
+  playVideo() {
+    const buttonPlay = $('.video-player').find('.vp-button-play');
+    const videoUrl = $('.video-player').data('youtube');
+
+    console.log(buttonPlay, videoUrl);
+
+    $(buttonPlay).on('click', () => {
+      $('.video-player').addClass('state-play')
+      const iframe = $('.video-player iframe')[0]
+      iframe.src += '&autoplay=1'
+    })
+  }
 };
 
 App.init();
