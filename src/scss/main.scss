@@ -13,6 +13,7 @@
 @import "./components/services";
 @import "./components/products";
 @import "./components/product-detail";
+
 h1 {
   @include f(74px, 96px, 600);
 
@@ -412,6 +413,7 @@ h3 {
 
   .products {
     @include is-grid(3, 20, 20);
+
     pointer-events: none;
 
     .is-grid {

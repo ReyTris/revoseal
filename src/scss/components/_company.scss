@@ -32,98 +32,100 @@
 .geography {
   .g-map {
     @include flex-all-center;
-    max-width: 970px;
-    margin: 0 auto;
+
     position: relative;
+    margin: 0 auto;
+    max-width: 970px;
   }
 
   .g-map-item {
     position: absolute;
-    top: 33%;
     left: 41%;
+    top: 33%;
+    z-index: 20;
     width: 756px;
     height: 458px;
-    z-index: 20;
-    pointer-events: none;
     opacity: 0;
     transition: all 0.3s ease;
+    pointer-events: none;
 
     &__close {
-      cursor: pointer;
       position: absolute;
       right: 0;
       top: -37px;
+      cursor: pointer;
     }
 
     &__point {
       position: absolute;
-      top: -70px;
       left: -70px;
+      top: -70px;
     }
 
     &__image {
       img {
+        border-radius: 16px;
         width: 100%;
         height: 100%;
-        border-radius: 16px;
       }
     }
 
     &-left {
       position: absolute;
-      bottom: 0;
       right: calc(50% - 19px);
-      padding: 20px;
+      bottom: 0;
       border: 1px solid var(--gray-color);
+      border-radius: 16px 16px 0;
+      padding: 20px;
       background-color: var(--light-color);
-      border-radius: 16px 16px 0 16px;
-      &:before {
+
+      &::before {
         content: "";
         position: absolute;
         right: 18px;
         bottom: -17px;
         z-index: 30;
+        border-top: 1px solid var(--gray-color);
+        border-right: 1px solid var(--gray-color);
         border-radius: 0 16px 0 0;
         width: 16px;
         height: 16px;
-        background-color: transparent;
-        border-top: 1px solid var(--gray-color);
-        border-right: 1px solid var(--gray-color);
         box-shadow: 5px -5px 0 3px var(--light-color);
+        background-color: transparent;
       }
     }
 
     &-right {
       position: absolute;
-      top: 0;
       left: 50%;
-      padding: 20px;
+      top: 0;
       border: 1px solid var(--gray-color);
+      border-radius: 0 16px 16px;
+      padding: 20px;
       background-color: var(--light-color);
-      border-radius: 0 16px 16px 16px;
 
-      &:before {
+      &::before {
         content: "";
         position: absolute;
         left: 17px;
         top: -16px;
+        border-bottom: 1px solid var(--gray-color);
+        border-left: 1px solid var(--gray-color);
         border-radius: 0 0 0 16px;
         width: 16px;
         height: 16px;
-        background-color: transparent;
-        border-bottom: 1px solid var(--gray-color);
-        border-left: 1px solid var(--gray-color);
         box-shadow: -5px 4px 0 3px var(--light-color);
+        background-color: transparent;
       }
     }
 
     &-middle {
       position: absolute;
+      left: calc(50% - 2px);
+      top: -1%;
       z-index: 30;
       width: 20px;
       height: 101%;
-      top: -1%;
-      left: calc(50% - 2px);
       background-color: var(--light-color);
     }
 
@@ -136,6 +138,7 @@
 
       &-subtitle {
         @include font(var(--dark-gray-color), 13px, 19px, 400);
+
         margin-top: 10px;
       }
 
@@ -154,12 +157,13 @@
     &--teflex,
     &--jiaflon,
     &--trisun {
-      top: 39%;
       left: -18%;
+      top: 39%;
+
       .g-map-item__point {
-        top: 10px;
         left: auto;
         right: -70px;
+        top: 10px;
       }
     }
   }
@@ -202,13 +206,13 @@
 
   .geography {
     .g-map-item {
-      top: 48%;
       left: 0;
+      top: 48%;
 
       &__point {
         position: absolute;
-        top: -200px;
         left: 45%;
+        top: -200px;
       }
 
       &--dmg,
@@ -216,12 +220,12 @@
       &--teflex,
       &--jiaflon,
       &--trisun {
-        top: 60%;
         left: 15%;
+        top: 60%;
 
         .g-map-item__point {
-          top: -29%;
           right: 33%;
+          top: -29%;
         }
       }
     }
@@ -255,15 +259,16 @@
     .g-map {
       width: 670px;
     }
+
     .g-map-item {
-      width: 696px;
-      top: 63%;
       left: 0;
+      top: 63%;
+      width: 696px;
 
       &__point {
         position: absolute;
-        top: -210px;
         left: 30%;
+        top: -210px;
       }
 
       &__content {
@@ -282,6 +287,7 @@
         }
       }
     }
+
     .g-tabs {
       @include is-grid(3, 20, 20);
     }
@@ -304,17 +310,18 @@
     .g-map {
       width: 100%;
     }
+
     .g-map-item {
-      width: 100%;
-      top: 40%;
       left: 0;
+      top: 40%;
       display: flex;
       flex-direction: column;
+      width: 100%;
 
       &__point {
         position: absolute;
-        top: -100px;
         left: 32%;
+        top: -100px;
       }
 
       &-left {
@@ -329,10 +336,11 @@
 
       &-right {
         @include flex-all-center;
+
         position: initial;
+        margin-top: -2px;
         border-top: none;
         border-radius: 0 0 16px 16px;
-        margin-top: -2px;
 
         &::before {
           display: none;
@@ -352,11 +360,12 @@
       &--teflex,
       &--jiaflon,
       &--trisun {
-        top: 55%;
         left: 0;
+        top: 55%;
+
         .g-map-item__point {
-          top: -85px;
           right: 31%;
+          top: -85px;
         }
       }
     }
@@ -402,8 +411,8 @@
     .g-map-item {
       &__point {
         position: absolute;
-        top: -80px;
         left: 28%;
+        top: -80px;
       }
 
       &__image {
@@ -415,11 +424,12 @@
       &--teflex,
       &--jiaflon,
       &--trisun {
-        top: 55%;
         left: 0;
+        top: 55%;
+
         .g-map-item__point {
-          top: -75px;
           right: 28%;
+          top: -75px;
         }
       }
     }
