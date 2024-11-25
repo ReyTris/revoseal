@@ -170,6 +170,16 @@ section {
   font-weight: 600;
 }
 
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
 @include big-desktop {
   section {
     &.section-main {
