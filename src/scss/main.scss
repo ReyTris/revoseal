@@ -63,37 +63,11 @@ h3 {
       right: 0;
       bottom: 2px;
       z-index: 10;
-      border-top: 1px solid var(--gray-color);
-      border-left: 1px solid var(--gray-color);
+      height: 45%;
+      width: 24%;
       border-radius: 16px 0 0;
       padding: 15px 0 0 15px;
       background: transparent;
-      background-color: #fff;
-      background-image: url('../img/6px.png');
-      background-size: 100% 100%;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: -16px;
-        bottom: 0;
-        border-radius: 0 0 16px;
-        width: 16px;
-        height: 16px;
-        box-shadow: 4px 4px 0 3px #fff;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: -16px;
-        border-radius: 0 0 16px;
-        width: 16px;
-        height: 16px;
-        box-shadow: 4px 4px 0 3px #fff;
-      }
-
       &:hover {
         span {
           font-size: 26px;
@@ -110,8 +84,8 @@ h3 {
         align-items: flex-end;
         justify-content: flex-start;
         padding: 20px;
-        width: 270px;
-        height: 254px;
+        width: 100%;
+        height: 100%;
         background-color: var(--blue-color);
 
         span {
@@ -129,6 +103,14 @@ h3 {
           transition: all 0.3s ease;
         }
       }
+    }
+  }
+
+  .mi-image {
+    width: 100%;
+
+    img {
+      width: 100%
     }
   }
 }
@@ -310,12 +292,14 @@ h3 {
 
         button {
           padding: 15px;
-          width: 228px;
-          height: 214px;
 
           svg {
             right: 15px;
             top: 15px;
+          }
+
+          span {
+            @include f(22px, 32px, 500);
           }
         }
       }
@@ -390,15 +374,15 @@ h3 {
 
     .mi-banner {
       .mi-banner-btn {
+        width: 30%;
+
         &:hover {
           span {
-            font-size: 20px;
+            font-size: 18px;
           }
         }
 
         button {
-          width: 194px;
-          height: 148px;
 
           span {
             @include f(18px, 26px, 500);
@@ -488,15 +472,17 @@ h3 {
 
     .mi-banner {
       .mi-banner-btn {
+        width: 43%;
+        height: 38%;
+
         &:hover {
           span {
-            font-size: 17px;
+            font-size: 15px;
           }
         }
 
         button {
-          width: 150px;
-          height: 100px;
+          padding: 12px;
 
           span {
             @include f(15px, 22px, 500);
@@ -587,10 +573,9 @@ h3 {
 
   .main-intro {
     .mi-banner {
-      .mi-image {
-        img {
-          height: 219px;
-        }
+      .mi-banner-btn {
+        width: 59%;
+        height: 53%
       }
     }
   }
