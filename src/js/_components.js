@@ -14,7 +14,8 @@ const App = {
     this.productsTabs();
     this.sliderProducts();
     this.geographyTabs();
-    this.playVideo()
+    this.playVideo();
+    this.scrollTo($(".link-to-form"));
   },
 
   burger() {
@@ -155,17 +156,37 @@ const App = {
   },
 
   playVideo() {
-    const buttonPlay = $('.video-player').find('.vp-button-play');
-    const videoUrl = $('.video-player').data('youtube');
+    const buttonPlay = $(".video-player").find(".vp-button-play");
+    const videoUrl = $(".video-player").data("youtube");
 
     console.log(buttonPlay, videoUrl);
 
-    $(buttonPlay).on('click', () => {
-      $('.video-player').addClass('state-play')
-      const iframe = $('.video-player iframe')[0]
-      iframe.src += '&autoplay=1'
-    })
-  }
+    $(buttonPlay).on("click", () => {
+      $(".video-player").addClass("state-play");
+      const iframe = $(".video-player iframe")[0];
+      iframe.src += "&autoplay=1";
+    });
+  },
+
+  scrollTo(link) {
+    link.on("click", function (e) {
+      var anchor = $(this);
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: $(anchor.attr("href")).offset().top,
+          },
+          {
+            duration: 500,
+            easing: "swing",
+            delay: 0,
+          }
+        );
+      e.preventDefault();
+      return false;
+    });
+  },
 };
 
 App.init();

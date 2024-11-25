@@ -13,6 +13,7 @@
 @import "./components/services";
 @import "./components/products";
 @import "./components/product-detail";
+@import "./components/404";
 
 h1 {
   @include f(74px, 96px, 600);
@@ -68,9 +69,11 @@ h3 {
       border-radius: 16px 0 0;
       padding: 15px 0 0 15px;
       background: transparent;
+
+      cursor: pointer;
       &:hover {
         span {
-          font-size: 26px;
+          transform: scale(1.05);
         }
 
         svg {
@@ -78,7 +81,7 @@ h3 {
         }
       }
 
-      button {
+      a {
         position: relative;
         display: flex;
         align-items: flex-end;
@@ -248,7 +251,7 @@ h3 {
 
       &:hover {
         span {
-          font-size: 26px;
+          transform: scale(1.05);
         }
 
         svg {
@@ -314,13 +317,7 @@ h3 {
   .main-intro {
     .mi-banner {
       .mi-banner-btn {
-        &:hover {
-          span {
-            font-size: 24px;
-          }
-        }
-
-        button {
+        a {
           padding: 15px;
 
           svg {
@@ -400,13 +397,7 @@ h3 {
       .mi-banner-btn {
         width: 30%;
 
-        &:hover {
-          span {
-            font-size: 18px;
-          }
-        }
-
-        button {
+        a {
           span {
             @include f(18px, 26px, 500);
           }
@@ -455,11 +446,6 @@ h3 {
 
       .products-link {
         padding: 20px;
-        &:hover {
-          span {
-            font-size: 24px;
-          }
-        }
 
         svg {
           right: 20px;
@@ -514,13 +500,7 @@ h3 {
         width: 43%;
         height: 38%;
 
-        &:hover {
-          span {
-            font-size: 15px;
-          }
-        }
-
-        button {
+        a {
           padding: 12px;
 
           span {

@@ -1,0 +1,117 @@
+.page-404 {
+  .layout {
+    background-image: url("../../img/main404.png"), url("../../img/6px.png");
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    object-fit: cover;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 846px;
+    text-align: center;
+  }
+
+  h1 {
+    @include f(258px, 336px, 600);
+  }
+
+  h2 {
+    @include f(54px, 70px, 600);
+  }
+
+  .line {
+    width: 136px;
+    height: 1px;
+    background-color: var(--main-color);
+    margin: 0 auto;
+    margin-top: 27px;
+  }
+
+  .description {
+    margin-top: 27px;
+    @include f(18px, 24px, 400);
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 18px 32px;
+    width: fit-content;
+    white-space: nowrap;
+    color: var(--light-color);
+    background-color: var(--blue-color);
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    margin-top: 27px;
+    cursor: pointer;
+
+    svg {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background-color: var(--dark-blue-color);
+    }
+  }
+}
+
+@include tablet() {
+  .page-404 {
+    .container {
+      max-width: 540px;
+    }
+
+    h2 {
+      @include f(38px, 50px, 500);
+    }
+  }
+}
+
+@include mobile-bg {
+  .page-404 {
+    h1 {
+      @include f(120px, 156px, 600);
+    }
+
+    h2 {
+      @include f(24px, 32px, 500);
+    }
+
+    .description {
+      @include f(15px, 20px, 400);
+    }
+  }
+}
+
+@include small-mobile {
+  .page-404 {
+    .container {
+      max-width: 540px;
+    }
+
+    h1 {
+      @include f(80px, 104px, 600);
+    }
+
+    h2 {
+      @include f(18px, 23px, 500);
+    }
+
+    .description {
+      @include f(13px, 18px, 400);
+    }
+  }
+}
