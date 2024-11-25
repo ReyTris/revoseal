@@ -69,6 +69,8 @@ h3 {
       padding: 15px 0 0 15px;
       background: transparent;
       background-color: #fff;
+      background-image: url('../img/6px.png');
+      background-size: 100% 100%;
 
       &::before {
         content: "";
