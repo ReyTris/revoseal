@@ -110,7 +110,7 @@ h3 {
     width: 100%;
 
     img {
-      width: 100%
+      width: 100%;
     }
   }
 }
@@ -121,21 +121,28 @@ h3 {
   .is-grid {
     .products-item {
       position: relative;
-      border: 1px solid var(--gray-color);
-      border-radius: 16px;
-      padding: 30px;
+      display: block;
       height: 266px;
-      text-align: right;
-      background: var(--light-color);
 
       &:hover {
-        .products-item__corner {
+        .products-item__back {
+          opacity: 0;
+        }
+
+        .products-item__top,
+        .products-item__corner,
+        a {
           opacity: 1;
         }
       }
 
       &__title {
         @include f(16px, 24px, 500);
+        position: absolute;
+        text-align: right;
+        top: 30px;
+        right: 30px;
+        z-index: 30;
       }
 
       &__image {
@@ -144,67 +151,88 @@ h3 {
         bottom: 30px;
         width: 150px;
         height: 150px;
+        z-index: 30;
+      }
+
+      &__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        border-radius: 16px;
+
+        border: 1px solid var(--gray-color);
+        background-color: var(--light-color);
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transition: all 0.3s ease;
+      }
+
+      &__top {
+        position: relative;
+        border: 1px solid var(--gray-color);
+        border-radius: 16px 16px 16px 0;
+        height: 198px;
+        background: var(--light-color);
+        z-index: 20;
+        opacity: 0;
+        transition: all 0.3s ease;
       }
 
       &__corner {
         position: absolute;
-        right: -1px;
-        bottom: -1px;
-        z-index: 10;
-        border-top: 1px solid var(--gray-color);
+        left: 0;
+        bottom: 1px;
+        z-index: 20;
+        border-right: 1px solid var(--gray-color);
         border-left: 1px solid var(--gray-color);
-        border-radius: 16px 0 0;
+        border-bottom: 1px solid var(--gray-color);
+        border-radius: 0 0 16px 16px;
         padding: 10px;
-        width: 200px;
-        height: 65px;
-        background: transparent;
-        background: #fff;
+        width: 47%;
+        height: 69px;
+        background: var(--light-color);
         opacity: 0;
         transition: all 0.3s ease;
 
         &::before {
           content: "";
           position: absolute;
-          left: -16px;
-          bottom: 0;
-          border-right: 1px solid var(--gray-color);
-          border-bottom: 1px solid var(--gray-color);
-          border-radius: 0 0 16px;
+          right: -16px;
+          top: 1px;
+          border-top: 1px solid var(--gray-color);
+          border-left: 1px solid var(--gray-color);
+          border-radius: 16px 0 0 0;
           width: 16px;
           height: 16px;
-          box-shadow: 4px 4px 0 3px #fff;
+          box-shadow: -4px -4px 0 3px var(--light-color);
+        }
+      }
+
+      a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+        border-radius: 16px;
+        padding: 18px 23px 18px 32px;
+        color: var(--light-color);
+        background-color: var(--blue-color);
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--dark-blue-color);
         }
 
-        &::after {
-          content: "";
-          position: absolute;
-          right: 0;
-          top: -16px;
-          border-right: 1px solid var(--gray-color);
-          border-bottom: 1px solid var(--gray-color);
-          border-radius: 0 0 16px;
-          width: 16px;
-          height: 16px;
-          box-shadow: 4px 4px 0 3px #fff;
-        }
-
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          border-radius: 16px;
-          padding: 18px 23px 18px 32px;
-          color: var(--light-color);
-          background-color: var(--blue-color);
-          transition: all 0.3s ease;
-
-          &:hover {
-            background-color: var(--dark-blue-color);
-          }
-
-          svg {
-            margin-left: 10px;
-          }
+        svg {
+          margin-left: 10px;
+          flex: 1;
         }
       }
     }
@@ -215,6 +243,8 @@ h3 {
       align-items: flex-end;
       justify-content: flex-start;
       background-color: var(--blue-color);
+      padding: 30px;
+      border-radius: 16px;
 
       &:hover {
         span {
@@ -311,19 +341,13 @@ h3 {
 
     .is-grid {
       .products-item {
-        height: 224px;
-
-        &__corner {
-          width: 180px;
-
-          a {
-            padding: 18px 16px 18px 24px;
-          }
-        }
-
         &__image {
           width: 110px;
           height: 110px;
+        }
+
+        a {
+          padding: 18px 24px;
         }
       }
     }
@@ -383,7 +407,6 @@ h3 {
         }
 
         button {
-
           span {
             @include f(18px, 26px, 500);
           }
@@ -400,12 +423,21 @@ h3 {
   .products {
     @include is-grid(3, 20, 20);
 
-    pointer-events: none;
-
     .is-grid {
       .products-item {
-        padding: 20px;
         height: 206px;
+
+        &:hover {
+          .products-item__back {
+            opacity: 1;
+          }
+
+          .products-item__top,
+          .products-item__corner,
+          a {
+            opacity: 0;
+          }
+        }
 
         &__image {
           left: 20px;
@@ -413,9 +445,16 @@ h3 {
           width: 96px;
           height: 96px;
         }
+
+        &__title {
+          right: 20px;
+          top: 20px;
+          padding-left: 20px;
+        }
       }
 
       .products-link {
+        padding: 20px;
         &:hover {
           span {
             font-size: 24px;
@@ -509,18 +548,11 @@ h3 {
           left: 15px;
           bottom: 15px;
         }
-
-        &__corner {
-          width: 180px;
-
-          a {
-            padding: 18px 16px 18px 24px;
-          }
-        }
       }
 
       .products-link {
         grid-column: 1/3;
+        padding: 15px;
 
         svg {
           right: 15px;
@@ -575,7 +607,7 @@ h3 {
     .mi-banner {
       .mi-banner-btn {
         width: 59%;
-        height: 53%
+        height: 53%;
       }
     }
   }
@@ -596,6 +628,8 @@ h3 {
         }
 
         &__title {
+          top: 10px;
+          right: 10px;
           @include f(12px, 18px, 500);
         }
       }

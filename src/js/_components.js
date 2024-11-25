@@ -134,7 +134,6 @@ const App = {
   geographyTabs() {
     $(".g-tabs-item").each((i, el) => {
       $(el).on("click", () => {
-        console.log("click");
         $(".g-tabs-item").removeClass("g-tabs-item--active");
         $(el).addClass("g-tabs-item--active");
         $(".g-map-item").removeClass("g-map-item--active");
@@ -145,6 +144,13 @@ const App = {
     $(".g-map-item__close").on("click", () => {
       $(".g-map-item").removeClass("g-map-item--active");
       $(".g-tabs-item").removeClass("g-tabs-item--active");
+    });
+
+    $(document).on("click", (e) => {
+      if (!$(e.target).closest(".g-tabs-item, .g-map-item").length) {
+        $(".g-tabs-item").removeClass("g-tabs-item--active");
+        $(".g-map-item").removeClass("g-map-item--active");
+      }
     });
   },
 
