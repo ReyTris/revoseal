@@ -1,25 +1,26 @@
 .page-404 {
   .layout {
-    background-image: url("../../img/main404.png"), url("../../img/6px.png");
-    background-size: cover, cover;
-    background-position: center, center;
-    background-repeat: no-repeat, repeat;
-    object-fit: cover;
-    min-height: 100vh;
-    width: 100%;
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
     margin-top: 0;
     padding-top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../img/main404.png"), url("../img/6px.png");
+    background-position: center, center;
+    background-size: cover, cover;
+    background-repeat: no-repeat, repeat;
+    object-fit: cover;
   }
+
   .container {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
     max-width: 846px;
     text-align: center;
+    transform: translate(-50%, -50%);
   }
 
   h1 {
@@ -31,15 +32,16 @@
   }
 
   .line {
+    margin: 0 auto;
+    margin-top: 27px;
     width: 136px;
     height: 1px;
     background-color: var(--main-color);
-    margin: 0 auto;
-    margin-top: 27px;
   }
 
   .description {
     margin-top: 27px;
+
     @include f(18px, 24px, 400);
   }
 
@@ -47,6 +49,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    margin-top: 27px;
     border-radius: 16px;
     padding: 18px 32px;
     width: fit-content;
@@ -54,8 +58,6 @@
     color: var(--light-color);
     background-color: var(--blue-color);
     transition: all 0.3s ease;
-    margin: 0 auto;
-    margin-top: 27px;
     cursor: pointer;
 
     svg {
@@ -68,7 +70,7 @@
   }
 }
 
-@include tablet() {
+@include tablet {
   .page-404 {
     .container {
       max-width: 540px;

@@ -23,15 +23,15 @@
     }
 
     &__text {
-      animation: logo-text 2s ease-in-out forwards;
-      margin-left: 10px;
       position: relative;
-      background-image: url('../../img/revoseal_schrift.webp');
+      margin-left: 10px;
       width: 143px;
       height: 32px;
+      background-image: url('../../img/revoseal_schrift.webp');
       background-size: 100% 100%;
       object-fit: cover;
       opacity: 0;
+      animation: logo-text 2s ease-in-out forwards;
     }
   }
 
@@ -39,6 +39,7 @@
     0% {
       transform: rotate(-90deg);
     }
+
     100% {
       transform: rotate(0deg);
     }
@@ -48,6 +49,7 @@
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -131,7 +133,6 @@
       flex-direction: column;
 
       &__text {
-
       width: 120px;
       height: 28px;
       }
