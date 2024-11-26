@@ -35,9 +35,10 @@
   }
 
   .ts-item {
-    border: 1px solid var(--gray-color);
     padding: 20px;
-    background-color: var(--light-color);
+    background-image: url("../../img/service-card.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
     &__text {
       margin-top: 20px;
@@ -46,13 +47,27 @@
 
   .ts-item-image {
     position: relative;
+    width: 330px;
+    height: 202px;
+    background-image: url("../../img/tar-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+
+    &--2 {
+      background-image: url("../../img/tar-2.png");
+    }
+
+    &--3 {
+      background-image: url("../../img/tar-3.png");
+    }
 
     &__title {
       @include font(var(--light-color), 20px, 26px, 600);
-
       position: absolute;
       left: 20px;
       top: 96px;
+      padding-right: 10px;
     }
 
     &__corner {
@@ -278,7 +293,13 @@
 
 @include big-desktop {
   .tar-service {
+    .ts-item {
+      width: 311px;
+      background-image: url("../../img/service-card-1024.png");
+    }
     .ts-item-image {
+      width: 271px;
+      height: 166px;
       &__title {
         @include f(16px, 20px, 600);
       }
@@ -321,6 +342,10 @@
   }
 
   .tar-service {
+    .ts-item {
+      background-image: url("../../img/service-card.png");
+    }
+
     .ts-block {
       @include is-grid(2, 20, 20);
     }
@@ -521,10 +546,6 @@
   }
 
   .result {
-    .res-block {
-      margin-top: 160px;
-    }
-
     .res-image {
       top: -20px;
       bottom: auto;
