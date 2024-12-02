@@ -11,13 +11,31 @@
 .page-body {
   position: relative;
   display: block;
+  padding: 0 calc(20px - (100vw - 100%)) 0 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:has(.preloader) {
+    overflow: hidden;
+    animation: body 0.1s forwards ease-in-out 2.5s;
+  }
+}
+
+@keyframes body {
+  0% {
+    overflow: hidden;
+  }
+
+  100% {
+    overflow: visible;
+  }
 }
 
 .is-main-layout {
   overflow: hidden;
   width: 100%;
   min-height: 100vh;
-  background-image: url('../img/back.png'), url('../img/6px.png');
+  background-image: url("../img/back.png"), url("../img/6px.png");
   background-size: 100% 100%, 100% 100%;
   background-repeat: no-repeat, repeat;
 }

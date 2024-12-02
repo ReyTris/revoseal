@@ -3,8 +3,11 @@
   @include('partials/head.html')
 
   <body class="page-body">
+    <div class="preloader">
+
+      <div class="preloader-logo"> <span class="preloader-logo__text">rev</span><img src="img/revoseal.png" alt=""><span class="preloader-logo__text">seal</span> </div>
+    </div>
     <div class="is-main-layout">
-      <!-- <div class="container"> -->
       @include('partials/header.html')
       <main class="main">
         <section class="section-first main-intro">
@@ -89,6 +92,5 @@
       </main>
       @include('partials/footer.html')
     </div>
-    <!-- </div> -->
   </body>
 </html>

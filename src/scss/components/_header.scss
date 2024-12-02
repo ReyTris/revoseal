@@ -18,18 +18,15 @@
   &-logo {
     @include flex-all-center;
 
-    svg {
+    img {
+      max-width: 75px;
       animation: logo 2s ease-in-out;
+      padding: 0 5px;
     }
 
     &__text {
-      position: relative;
-      margin-left: 10px;
-      width: 143px;
-      height: 32px;
-      background-image: url("../img/revoseal_schrift.webp");
-      background-size: 100% 100%;
-      object-fit: cover;
+      @include blank-gothic-font;
+      @include f(44px, 50px, 600);
       opacity: 0;
       animation: logo-text 2s ease-in-out forwards;
     }
@@ -130,11 +127,9 @@
 @include tablet {
   .header {
     &-logo {
-      flex-direction: column;
 
       &__text {
-        width: 120px;
-        height: 28px;
+        display:none;
       }
     }
   }
@@ -143,7 +138,10 @@
 @include small-tablet {
   .header {
     &-logo {
-      flex-direction: row;
+      &__text {
+        display:block;
+        @include f(32px, 42px, 600);
+      }
     }
 
     .header-nav {
